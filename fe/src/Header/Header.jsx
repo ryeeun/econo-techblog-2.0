@@ -7,7 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import LoginButton from './components/LoginButton';
 import NavItem from './components/NavItem';
 import Search from './components/Search';
-import testLogo from './img/test_logo.png';
+import logo from './img/tecono_logo.png';
 import './Header.css';
 import { useLoginStateContext } from '../Context/LoginContext';
 
@@ -45,7 +45,7 @@ function Header() {
         onClick={onLogoClick}
         className="header-logo__button"
       >
-        <img className="header-logo" src={testLogo} alt="econovation logo" />
+        <img className="header-logo" src={logo} alt="econovation logo" />
       </button>
       <ul className="header-nav-button-box">
         <NavItem navName="Home" link="/" />

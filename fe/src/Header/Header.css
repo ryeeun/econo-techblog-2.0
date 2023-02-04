@@ -2,12 +2,10 @@
     display: flex;
     position: sticky;
     align-items: center;
-    justify-content: space-between;
-    height:6vh;
+    height: 60px;
     top: 0;
     left: 0;
     right: 0;
-    border-bottom: 1px solid #bebebe;
     z-index : 10;
     background-color:white;
 }
@@ -21,6 +19,9 @@
   padding: 0;
   overflow: hidden;
   color: #1c4961;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 
 .header-right-box{
@@ -28,17 +29,19 @@
   align-items: center;
   padding-left: auto;
   padding-right: 50px;
-}
-
-.header-logo{
-  height: 100%;
+  margin-left: auto;
 }
 
 .header-logo__button{
   appearance: none;
   border: none;
-  background-color: white;
-  height: 97%;
+  background-color: inherit;
+  margin-left: 20px;
+  height: 100%;
+}
+
+.header-logo {
+  height: 60%;
 }
 
 .header__user-name{

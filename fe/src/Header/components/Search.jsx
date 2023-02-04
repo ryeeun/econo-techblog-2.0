@@ -11,36 +11,19 @@ function Search() {
   };
 
   return (
-    <div>
-      {isSearchBarOn ? (
-        <div className="search">
-          <input
-            className="search-input"
-            placeholder="검색어를 입력하세요..."
-          />
-          <button className="search-button" type="button" onClick={onClick}>
-            <img
-              className="search-button-img"
-              alt="search-button"
-              src={searchButton}
-            />
-          </button>
-        </div>
-      ) : (
-        <div className="search">
-          <button
-            className="search__button--inactive"
-            type="button"
-            onClick={onClick}
-          >
-            <img
-              className="search-button__img--inactive"
-              alt="search-button"
-              src={searchButton}
-            />
-          </button>
-        </div>
+    <div className={['search', isSearchBarOn && 'search--active'].join(' ')}>
+      {isSearchBarOn && (
+        <input
+          className="search-input"
+        />
       )}
+      <buton className="search-button" type="button" onClick={onClick}>
+        <img
+          className="search-button-img"
+          alt="search-button"
+          src={searchButton}
+        />
+      </buton>
     </div>
   );
 }
