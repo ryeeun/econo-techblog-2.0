@@ -1,0 +1,9 @@
+.nav-item{
+    float: left;
+    list-style: none;
+    text-decoration: none;
+    color: #1c4961;
+    font-size: 18px;
+    padding-left: 23px;
+    padding-right: 23px;
+}
