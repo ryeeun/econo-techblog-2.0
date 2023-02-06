@@ -1,40 +1,102 @@
-.home-offical{
+.home-official{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 140px;
 }
 
-.home-offical h2{
+.home-official h2{
     color: #1c4961;
-    margin: 70px 0;
+    margin: 50px 0;
 }
 
-.home-offical-post__container{
+.home-official-post__container{
     display: flex;
     height: 500px;   
-    width: 1513px; 
+    width: 1500px; 
 }
 
-.home-offical-post__container--left{
-    height: 500px;
-    width: 817px;
+.home-official-post__container--left{
+    position: relative;
     border-radius: 15px;
-    background-color: aquamarine;
+    overflow: hidden;
+    background-color: gray;
+    border: solid 2px #eee;
 }
 
-.home-offical-post__container--right{
+.home-official-post-background {
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 500px;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-official-post-text {
+    width: 500px;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.home-official-post__container--left img {
+    border-radius: 15px;
+    height: 500px;
+    width: 800px;
+    object-fit: cover;
+}
+
+.home-official-post__container--left:hover .home-official-post-background {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.548);
+}
+
+.home-official-post__container--right{
     display: flex;
     flex-direction: column;
-    height: 817px;
-    width: 665px;
+    justify-content: space-between;
     margin-left: 31px;
 }
 
-.home-offical-post__container--right-element{
-    height: 233px;
-    width: 100%;
-    background-color: chartreuse;
+.home-official-post__container--right-element{
+    position: relative;
+    height: 240px;
+    background-color: gray;
     border-radius: 15px;
-    margin: 11px 0;
+    overflow: hidden;
+    border: solid 2px #eee;
+}
+
+.home-official-post__container--right img {
+    height: 240px;
+    width: 665px;
+}
+
+.home-official-post-background--right {
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 240px;
+    width: 665px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-official-post__container--right-element:hover .home-official-post-background--right {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.548);
 }

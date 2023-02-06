@@ -9,7 +9,9 @@ import blog from './img/blog.png';
 function HomeBanner() {
   return (
     <div className="home-banner">
-      <div className="home-banner-side__text">econovation tech blog</div>
+      <div className="home-banner-side">
+        <p className="home-banner-side__text">econovation tech blog</p>
+      </div>
       <div className="home-banner-text">
         <h1>T-ECONO</h1>
         <p>

@@ -1,32 +1,22 @@
 .home-banner{
-    height: 70vh;
-    display: flex;
+    height: 800px;
     background-image: url('./img/home_banner_img.png');
     background-size: cover;
+    display: flex;
+}
+
+.home-banner-side {
+    display: flex;
     align-items: center;
 }
 
 .home-banner-side__text{
-    position: relative;
-    right: 10px;
+    display:inline-block;
     transform: rotate(0.75turn);
     color: white;
     font-weight: normal;
     font-size: 20px;
-    margin: 0;
-}
-
-.home-banner h1{
-    font-size: 99px;
-    margin: 0;
-}
-
-.home-banner a{
-    height: 35px;
-    width: 35px;
-}
-
-.home-banner img{
+    height: 140px;
 }
 
 .home-banner-text{
@@ -36,16 +26,38 @@
     color: white;
 }
 
+.home-banner-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+}
+
+.home-banner-text h1{
+    font-size: 90px;
+    margin: 10px 0px 10px 0px;
+}
+
 .home-banner-button__container{
     position: relative;
-    top: -25%;
+    top: 50px;
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    margin-right: 45px;
+    margin-right: 60px;
+}
+
+.home-banner-button__container a{
+    margin-bottom: 25px;
 }
 
 .home-banner__link{
     cursor: pointer;
     margin-bottom: 10px;
+}
+
+.home-banner img {
+    height: 25px;
+    width: 25px;
 }
