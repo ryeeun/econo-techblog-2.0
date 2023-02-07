@@ -5,6 +5,7 @@ import facebook from './img/facebook.png';
 import insta from './img/insta.png';
 import youtube from './img/youtube.png';
 import blog from './img/blog.png';
+import mainTypo from './img/main_typo.webp';
 
 function HomeBanner() {
   return (
@@ -12,12 +13,9 @@ function HomeBanner() {
       <div className="home-banner-side">
         <p className="home-banner-side__text">econovation tech blog</p>
       </div>
-      <div className="home-banner-text">
+      <div className="home-banner-middle">
         <h1>T-ECONO</h1>
-        <p>
-          에코노베이션 기술 블로그 T-econo입니다. 문제 해결, 에코노베이션의 행사
-          등 에코노 베이션의 다양한 소식을 접할 수 있습니다.
-        </p>
+        <img className="home-banner-middle-typo" src={mainTypo} alt="홈 배너 이미지" />
       </div>
       <div className="home-banner-button__container">
         <a
