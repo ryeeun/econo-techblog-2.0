@@ -7,12 +7,13 @@ import PropTypes from 'prop-types';
 
 import './RecentPost.css';
 import noImg from '../../components/img/no_img.png';
+import defaultImg from '../../components/img/default_img.png';
 
 const RecentPost = function ({ post }) {
   const formatDate = post.createdDate.split(' ')[0].replace(/\//gi, '.');
   return (
     <div className="recent-post">
-      <div className="recent-post__img" />
+      <img className="recent-post__img" src={defaultImg} alt="게시물 이미지" />
       <div className="recent-post-info">
         <div className="recent-post-title">{post.title}</div>
         <div className="recent-post-middle">

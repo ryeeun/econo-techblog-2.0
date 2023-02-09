@@ -3,6 +3,7 @@ import './RecentPosts.css';
 import { gql, useQuery } from '@apollo/client';
 
 import RecentPost from './components/RecentPost';
+import bg from './img/main_recents_bg.png';
 
 const GET_POSTS = gql`
   query findAllPosts($mainCategoryNumber: Int!, $page: Int!) {
@@ -19,6 +20,53 @@ const GET_POSTS = gql`
     }
   }
 `;
+
+const posts = {
+  data: [
+    {
+      title: '[ECONO PEOPLE #20] 일상은 즐겁게 인생은 진지',
+      content: '안녕하세요 에코노베이션 김정인입니다. ECONO PEOPLE은 에코노베이션 구성원의 이야기를 담은 인터뷰입니다.',
+      categoryName: 'html,css',
+      useName: '에코노베이션',
+      createdDate: '2023/01/01 00:00:00',
+    },
+    {
+      title: '[ECONO PEOPLE #20] 일상은 즐겁게 인생은 진지',
+      content: '안녕하세요 에코노베이션 김정인입니다. ECONO PEOPLE은 에코노베이션 구성원의 이야기를 담은 인터뷰입니다.',
+      categoryName: 'html,css',
+      useName: '에코노베이션',
+      createdDate: '2023/01/01 00:00:00',
+    },
+    {
+      title: '[ECONO PEOPLE #20] 일상은 즐겁게 인생은 진지',
+      content: '안녕하세요 에코노베이션 김정인입니다. ECONO PEOPLE은 에코노베이션 구성원의 이야기를 담은 인터뷰입니다.',
+      categoryName: 'html,css',
+      useName: '에코노베이션',
+      createdDate: '2023/01/01 00:00:00',
+    },
+    {
+      title: '[ECONO PEOPLE #20] 일상은 즐겁게 인생은 진지',
+      content: '안녕하세요 에코노베이션 김정인입니다. ECONO PEOPLE은 에코노베이션 구성원의 이야기를 담은 인터뷰입니다.',
+      categoryName: 'html,css',
+      useName: '에코노베이션',
+      createdDate: '2023/01/01 00:00:00',
+    },
+    {
+      title: '[ECONO PEOPLE #20] 일상은 즐겁게 인생은 진지',
+      content: '안녕하세요 에코노베이션 김정인입니다. ECONO PEOPLE은 에코노베이션 구성원의 이야기를 담은 인터뷰입니다.',
+      categoryName: 'html,css',
+      useName: '에코노베이션',
+      createdDate: '2023/01/01 00:00:00',
+    },
+    {
+      title: '[ECONO PEOPLE #20] 일상은 즐겁게 인생은 진지',
+      content: '안녕하세요 에코노베이션 김정인입니다. ECONO PEOPLE은 에코노베이션 구성원의 이야기를 담은 인터뷰입니다.',
+      categoryName: 'html,css',
+      useName: '에코노베이션',
+      createdDate: '2023/01/01 00:00:00',
+    },
+  ],
+};
 
 const RecentPosts = function () {
   const [currentPosts, setCurrentPosts] = useState([]);
@@ -46,7 +94,7 @@ const RecentPosts = function () {
       page: 0,
     },
   });
-  console.log('recentposts', data);
+  console.log('recentposts', currentPosts);
   useEffect(() => {
     if (data) {
       const slicePosts = data.findAllPosts;
@@ -73,25 +121,29 @@ const RecentPosts = function () {
   };
   return (
     <div className="recent-posts">
+      <img className="recent-posts-bg" src={bg} alt="배경 이미지" />
       <h2 className="recent-posts__title">Recent Posts</h2>
       <div className="recent-posts-nav">
         {navArr.map((elem) => (
-          <button
-            key={elem.id}
-            type="button"
-            className={
-              elem.active
-                ? 'recent-posts__nav-item recent-posts__nav-item--active'
-                : 'recent-posts__nav-item'
-            }
-            onClick={() => onClick(elem.id)}
-          >
-            {elem.name}
-          </button>
+          <div>
+            <button
+              key={elem.id}
+              type="button"
+              className={
+                elem.active
+                  ? 'recent-posts__nav-item recent-posts__nav-item--active'
+                  : 'recent-posts__nav-item'
+              }
+              onClick={() => onClick(elem.id)}
+            >
+              <span>{elem.name}</span>
+              <div className="recent-posts__nav-item-bar" />
+            </button>
+          </div>
         ))}
       </div>
       <div className="recent-posts-box">
-        {currentPosts.map((item) => (
+        {posts.data.map((item) => (
           <RecentPost key={item.id} post={item} />
         ))}
       </div>

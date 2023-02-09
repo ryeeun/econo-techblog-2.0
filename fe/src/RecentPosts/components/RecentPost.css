@@ -7,12 +7,12 @@
     box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.16);
     overflow: hidden;
     background-color: #fff;
-    margin: 20px;
+    margin: 25px;
 }
 
 .recent-post__img{
-    height: 240px;
-    background-color: black;
+    height: 250px;
+    object-fit: cover;
 }
 
 .recent-post-info {
