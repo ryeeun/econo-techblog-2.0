@@ -2,9 +2,9 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    height: 26px;
+    height: 30px;
     text-align: center;
-    width: 85px;
+    width: 90px;
     margin: 0;
     color : white;
     background-color: #ff9100;
@@ -16,4 +16,11 @@
     transition: all ease-out 0.5s;
     background-color: rgb(196, 116, 24);
     border: 1px rgb(196, 116, 24) solid;
+}
+
+.login-button span {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
 }
