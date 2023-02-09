@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index : 10;
+    z-index : 999;
     background-color:white;
 }
 
@@ -22,6 +22,7 @@
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0%);
+  font-weight: 500;
 }
 
 .header-right-box{
@@ -43,7 +44,7 @@
 }
 
 .header-logo {
-  height: 60%;
+  height: 55%;
 }
 
 .header__user-name{
