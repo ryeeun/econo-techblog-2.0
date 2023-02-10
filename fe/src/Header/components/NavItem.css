@@ -1,0 +1,27 @@
+.nav-item{
+    float: left;
+    list-style: none;
+    text-decoration: none;
+    color: #1c4961;
+    opacity: 0.8;
+    font-size: 20px;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.nav-item--active {
+    float: left;
+    list-style: none;
+    text-decoration: none;
+    color: #1c4961;
+    opacity: 1;
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}

@@ -1,0 +1,23 @@
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__box {
+    height: 110px;
+    width: 90%;
+    margin: 40px 0px ;
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #2269fb;
+    color: white;
+    border-radius: 18px;
+}
+
+.footer__text {
+    font-size: 13px;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
