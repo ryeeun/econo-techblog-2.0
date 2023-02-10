@@ -1,20 +1,24 @@
 /* eslint-disable jsx-a11y/mouse-events-have-key-events */
 /* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import LoginButton from './components/LoginButton';
 import NavItem from './components/NavItem';
 import Search from './components/Search';
+import DropDown from './components/DropDown';
 import logo from './img/tecono_logo.png';
 import './Header.css';
 import { useLoginStateContext } from '../Context/LoginContext';
+import noImg from '../components/img/no_img.png';
 
 function Header() {
+  const ref = useRef();
   // eslint-disable-next-line no-unused-vars
   const [isLogin, setIsLogin] = useState(false);
-  const [isMouseOver, setIsMouseOver] = useState(false);
+  const [isOpen, setOpen] = useState(false);
+
   const loginContext = useLoginStateContext();
   // eslint-disable-next-line no-unused-vars
   const navigate = useNavigate();
@@ -23,13 +27,23 @@ function Header() {
     navigate('/');
   };
 
-  const onMouseOverHandler = () => {
-    setIsMouseOver(() => true);
+  const onClick = () => {
+    setOpen(!isOpen);
   };
 
-  const onMouseOutHandler = () => {
-    setIsMouseOver(() => false);
+  const handleClickOutSide = (e) => {
+    console.log(ref.current.contains(e.target));
+    if (isOpen && !ref.current.contains(e.target)) {
+      setOpen(false);
+    }
   };
+
+  useEffect(() => {
+    window.addEventListener('click', handleClickOutSide);
+    return () => {
+      window.removeEventListener('click', handleClickOutSide);
+    };
+  });
 
   useEffect(() => {
     if (loginContext.id === -1) {
@@ -55,16 +69,12 @@ function Header() {
       </ul>
       <div className="header-right-box">
         <Search />
-        {isLogin ? (
-          <div onMouseOver={onMouseOverHandler} onMouseOut={onMouseOutHandler}>
-            <span className="header__user-name">{loginContext.userName}</span>님
-            {isMouseOver ? (
-              <div>
-                <Link to="/mypage">My Page</Link>
-                <Link to="/write">Write</Link>
-              </div>
-            ) : undefined}
-          </div>
+        {!isLogin ? (
+          <button ref={ref} className="header-user" type="button" onClick={onClick}>
+            <img className="header__user-img" src={noImg} alt="user img" />
+            <span className="header__user-name">에코노베이션</span>님
+            {isOpen && <DropDown />}
+          </button>
         ) : (
           <LoginButton />
         )}

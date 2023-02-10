@@ -47,6 +47,25 @@
   height: 55%;
 }
 
+.header-user {
+  border: none;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.header__user-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
 .header__user-name{
-  font-weight: bold;
+  font-size: 17px;
+  font-weight: 700;
 }
