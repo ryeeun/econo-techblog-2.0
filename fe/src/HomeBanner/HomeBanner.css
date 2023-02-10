@@ -1,36 +1,42 @@
 .home-banner{
-    height: 900px;
+    height: 890px;
     background-image: url('./img/main_bg.webp');
     background-size: cover;
     display: flex;
 }
 
-.home-banner-side {
+
+.home-banner-side{
     display: flex;
     align-items: center;
-}
-
-.home-banner-side__text{
-    display:inline-block;
     transform: rotate(0.75turn);
-    position: relative;
-    right: 15px;
     color: white;
+    position: relative;
+    right: 60px;
+    letter-spacing: 2px;
+    font-family: proxima-nova, sans-serif;
     font-weight: 400;
     font-size: 20px;
-    letter-spacing: 2px;
-    height: 140px;
+    margin: 0;
 }
 
 .home-banner-middle{
+    position: relative;
+    left: -30px;
+    width: 700px;
+    height: 70%;
     background-color: rgba(255, 255, 255, 0.171);
     border-radius: 25px;
     margin: auto 0%;
     color: white;
-    padding: 20px 70px 20px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 70px;
 }
 
 .home-banner-middle h1{
+    width: 90%;
     font-size: 130px;
     margin: 0px 0px 10px 0px;
 }

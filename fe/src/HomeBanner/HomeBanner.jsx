@@ -10,9 +10,7 @@ import mainTypo from './img/main_typo.webp';
 function HomeBanner() {
   return (
     <div className="home-banner">
-      <div className="home-banner-side">
-        <p className="home-banner-side__text">econovation tech blog</p>
-      </div>
+      <div className="home-banner-side">econovation tech blog</div>
       <div className="home-banner-middle">
         <h1>T-ECONO</h1>
         <img className="home-banner-middle-typo" src={mainTypo} alt="홈 배너 이미지" />
