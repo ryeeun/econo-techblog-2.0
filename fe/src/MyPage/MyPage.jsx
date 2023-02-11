@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 import './css/MyPage.css';
-import MyPosts from './MyPosts';
-import Profile from './Profile';
+import MyPosts from './components/MyPosts';
+import Profile from './components/Profile';
 
 function MyPage() {
   const [isMyInfoSelect, setIsMyInfoSelect] = useState(false);
