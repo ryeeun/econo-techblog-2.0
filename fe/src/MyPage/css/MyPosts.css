@@ -8,41 +8,57 @@
 }
 
 .my-posts{
-    margin-left: 2vw;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
 }
 .my-posts h3{
     color: white;
-    margin: 0 0 2vh 0;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
-.my-posts__container{
-    background-color: white;
-    border: 2px solid #f1f1f1;
-    border-radius: 15px;
-    width: 75vw;
-    height: 31vh;
-}
-
-.my-posts-group__container{
-    background-color: white;
-    border: 2px solid #f1f1f1;
-    border-radius: 15px;
-    width: 75vw;
-    height: 31vh;
+.my-posts-group__nav {
+    margin-top: 15px;
 }
 
 .my-posts-nav__button{
+    position: relative;
+    top: 4px;
     appearance: none;
     border: none;
     background-color: white;
     cursor: pointer;
     font-size: 18px;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    width: 100px;
+    height: 50px;
+    padding: 0;
+    z-index: 1;
 }
 
 .nav__button--active{
-    font-weight: bold;
-    border-bottom: 7px solid #2269fb;
+    position: relative;
+    top: 4px;
+    font-size: 18px;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
     animation-name: fadeIn;
     animation-duration: 1s;
+    height: 50px;
+    padding: 0;
+    z-index: 10;
+}
+
+.nav__button--active .my-posts-group__nav-bar {
+    width: 100%;
+    height: 7px;
+    position: absolute;
+    bottom: 0px;
+    background-color: #2269fb;
+    border-radius: 15px;
 }
 
