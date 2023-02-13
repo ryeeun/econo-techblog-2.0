@@ -2,6 +2,7 @@
     width: 280px;
     font-family: 'Noto Sans KR';
     font-style: normal;
+    margin-right: 40px;
 }
 
 .profile h3{
@@ -59,5 +60,5 @@
 
 .profile-container-bottom-count {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 20px;
 }
