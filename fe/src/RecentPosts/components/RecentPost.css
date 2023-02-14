@@ -1,7 +1,7 @@
 .recent-post {
     display: flex;
     flex-direction: column;
-    width: 380px;
+    width: 340px;
     height: fit-content;
     border-radius: 15px;
     box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.16);
@@ -13,18 +13,19 @@
 }
 
 .recent-post__img{
-    height: 250px;
+    height: 220px;
     object-fit: cover;
 }
 
 .recent-post-info {
     display: flex;
+    align-items: center;
     flex-direction: column;
     padding: 10px;
 }
 
 .recent-post-title{
-    width: 350px;
+    width: 310px;
     overflow:hidden;
     text-overflow: ellipsis;
     white-space:nowrap;
@@ -32,15 +33,14 @@
     line-height: 1.47;
     font-weight: 700;
     color: #1c4961;
-    margin: 5px 0px;
+    margin-bottom: 8px;
 }
 
 .recent-post-middle {
     display: flex;
     align-items: flex-start;
     height: 50px;
-    width: 350px;
-    margin-top: 2px;
+    width: 310px;
 }
 
 .recent-post-desc {
@@ -73,7 +73,7 @@
 }
 
 .recent-post-bottom {
-    padding: 10px 15px;
+    padding: 8px 12px;
     background-color: rgb(144, 165, 190, 0.16);
     display: flex;
     justify-content: space-between;
@@ -95,6 +95,7 @@
 
 .recent-post__date {
     font-size: 10px;
+    color: #7070707c;
 }
 
 .writer-name {

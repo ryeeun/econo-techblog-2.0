@@ -15,7 +15,7 @@
 }
 
 .recent-posts__title {
-    font-size: 28px;
+    font-size: 25px;
     font-family: proxima-nova, sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -43,13 +43,13 @@
     top: 3px;
     background-color: inherit;
     padding: 0;
-    width: 200px;
+    width: 170px;
     border: none;
     height: 50px;
     text-align: center;
     color: #000000;
     opacity: 0.5;
-    font-size: 22px;
+    font-size: 20px;
     font-family: proxima-nova, sans-serif;
     font-weight: 500;
     font-style: normal;

@@ -1,5 +1,5 @@
 .home-banner{
-    height: 890px;
+    height: 93vh;
     background-image: url('./img/main_bg.webp');
     background-size: cover;
     display: flex;
@@ -24,8 +24,6 @@
 .home-banner-middle{
     position: relative;
     left: -30px;
-    width: 700px;
-    height: 70%;
     background-color: rgba(255, 255, 255, 0.171);
     border-radius: 25px;
     margin: auto 0%;
@@ -37,15 +35,14 @@
 }
 
 .home-banner-middle h1{
-    width: 90%;
-    font-size: 130px;
-    margin: 0px 0px 10px 0px;
+    font-size: 120px;
+    margin: 40px 70px 20px 0px;
 }
 
 .home-banner-middle-typo {
-    width: 440px;
-    height: 340px;
+    width: 400px;
     object-fit: contain;
+    margin-bottom: 40px;
 }
 
 .home-banner-button__container{
