@@ -11,6 +11,16 @@ import defaultImg from '../../components/img/default_img.png';
 
 const RecentPost = function ({ post }) {
   const formatDate = post.createdDate.split(' ')[0].replace(/\//gi, '.');
+  let tagLength = 0;
+  const tagArray = [];
+  post.categoryName.split(',').every((elem) => {
+    if (tagLength + elem.length < 20) {
+      tagLength += elem.length;
+      tagArray.push(elem);
+      return true;
+    }
+    return false;
+  });
   return (
     <div className="recent-post">
       <img className="recent-post__img" src={defaultImg} alt="게시물 이미지" />
@@ -22,7 +32,7 @@ const RecentPost = function ({ post }) {
       </div>
       <div className="recent-post-bottom">
         <div className="recent-post-tags">
-          {post.categoryName.split(',').map((tag, index) => (
+          {tagArray.map((tag, index) => (
             <span key={index} className="recent-post__tag">{`#${tag}`}</span>
           ))}
         </div>

@@ -26,7 +26,7 @@ const posts = {
     {
       title: '[ECONO PEOPLE #20] 일상은 즐겁게 인생은 진지',
       content: '안녕하세요 에코노베이션 김정인입니다. ECONO PEOPLE은 에코노베이션 구성원의 이야기를 담은 인터뷰입니다.  ECONO PEOPLE은 에코노베이션',
-      categoryName: 'html,css',
+      categoryName: 'html,css,javascript,react',
       userName: '에코노베이션',
       createdDate: '2023/01/01 00:00:00',
     },
