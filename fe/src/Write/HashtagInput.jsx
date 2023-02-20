@@ -73,7 +73,7 @@ function HashtagInput() {
         onKeyDown={onKeyDown}
         onKeyPress={onKeyPress}
         value={inputState}
-        placeholder="태그를 입력하세요..."
+        placeholder={!hashtagList.length && '태그를 입력하세요...'}
       />
     </div>
   );

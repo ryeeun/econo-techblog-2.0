@@ -3,19 +3,28 @@
     height: 63%;
     width: 99%;
     border: 1px solid #d3d3d3;
+    font-size: 15px;
 }
 
 .hashtag-element{
+    margin-left: 5px;
     color: #4e87fb;
     background-color: white;
     border: none;
     transition: all 0.125s ease-in 0s;
     animation: 0.125s ease-in-out 0s 1 normal forwards;
+    font-family: 'Noto Sans KR';
+    font-weight: 500;
+    font-style: normal;
 }
 
 .hashtag-input{
     border:none;
     font-family: 'Noto Sans KR';
+    font-weight: 500;
+    font-style: normal;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .hashtag-input:focus{
