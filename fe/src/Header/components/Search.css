@@ -10,7 +10,7 @@
 
 .search--active {
     width: 250px;
-    background-color: #f2f2f2;
+    background-color: #e2e2e2;
     border-radius: 18px;
 }
 
@@ -23,6 +23,7 @@
     align-items: center;
     right: 0;
     z-index: 999;
+    background: none;
 }
 
 .search-button-img{
