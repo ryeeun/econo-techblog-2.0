@@ -17,13 +17,13 @@ function Search() {
           className="search-input"
         />
       )}
-      <buton className="search-button" type="button" onClick={onClick}>
+      <button className="search-button" type="button" onClick={onClick}>
         <img
           className="search-button-img"
           alt="search-button"
           src={searchButton}
         />
-      </buton>
+      </button>
     </div>
   );
 }

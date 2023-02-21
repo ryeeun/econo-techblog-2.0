@@ -2,6 +2,51 @@
     height: 63%;
     width: 99%;
     border: 1px solid #d3d3d3;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 999;
+}
+
+.category-select-box-text {
     color: #d3d3d3;
-    
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 15px;
+}
+
+.selected {
+    color: black;
+}
+
+.category-select-list {
+    position: absolute;
+    top: 63%;
+    left: -1px;
+    background-color: white;
+    color: black;
+    border: 1px solid #d3d3d3;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.category-select-item {
+    height: 35px;
+    line-height: 35px;
+    padding-left: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-family: proxima-nova, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    font-style: normal;
+}
+
+.category-select-item:hover {
+    background-color: #4E87FB;
+    color: white;
+    border-radius: 5px;
 }

@@ -1,12 +1,14 @@
+/* eslint-disable react/forbid-prop-types */
+/* eslint-disable import/no-extraneous-dependencies */
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import './css/HashtagInput.css';
 
 const SEPERATOR = ',';
 const BACK_SPACE_CODE = 8;
 
-function HashtagInput() {
-  const [hashtagList, setHashtagList] = useState([]);
+function HashtagInput({ hashtagList, setHashtagList }) {
   const [inputState, setInputState] = useState('');
 
   const handleHashTagList = (content) => {
@@ -73,10 +75,15 @@ function HashtagInput() {
         onKeyDown={onKeyDown}
         onKeyPress={onKeyPress}
         value={inputState}
-        placeholder="태그를 입력하세요..."
+        placeholder={!hashtagList.length && '태그를 입력하세요...'}
       />
     </div>
   );
 }
+
+HashtagInput.propTypes = {
+  hashtagList: PropTypes.array.isRequired,
+  setHashtagList: PropTypes.func.isRequired,
+};
 
 export default HashtagInput;
