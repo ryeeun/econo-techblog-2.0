@@ -1,17 +1,17 @@
 .bottom-banner {
     display: flex;
     justify-content: center;
-    padding: 100px;
+    padding: 6.2vw;
     background-color: #e5edf7;
 }
 
 .bottom-banner-box {
     width: 85%;
     display: flex;
-    border-radius: 10px;
+    border-radius: 0.6vw;
     background-image: url('./img/econo_direct_bg.webp');
     background-size: cover;
-    padding: 60px;
+    padding: 3.7vw;
 }
 
 .bottom-banner__text {
@@ -21,50 +21,48 @@
 }
 
 .bottom-banner__big-text {
-    font-size: 2em;
+    font-size: 2vw;
     font-family: proxima-nova, sans-serif;
     font-weight: 700;
     font-style: normal;
     color: white;
-    margin: 8px 0px;
+    margin: 0.3vw 0;
 }
 
 .bottom-banner__small-text {
-    font-size: 1em;
+    font-size: 0.9vw;
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 300;
-    letter-spacing: 1px;
     line-height: 1.7;
     color: white;
-    margin-bottom: 10px;
+    margin-bottom: 0.6vw;
 }
 
 .bottom-banner__img {
     width: 35%;
     object-fit: cover;
-    margin-right: 4em;
+    margin-right: 4vw;
 }
 
 .bottom-banner-btn{
     width: 70%;
-    height: 55px;
+    height: 3.2vw;
     border: none;
-    border-radius: 37px;
+    border-radius: 2.2vw;
     background-color: white;
     color: #0076ff;
-    margin-top: 20px;
-    padding: 0px 20px;
+    margin-top: 1.2vw;
+    padding: 0px 1.2vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 500;
-    font-size: 15px;
-    letter-spacing: 1px;
+    font-size: 0.9vw;
 }
 
 .bottom-banner-btn__img {
-    height: 14px;
+    height: 1vw;
 }

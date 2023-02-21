@@ -4,12 +4,12 @@
     text-decoration: none;
     color: #1c4961;
     opacity: 0.8;
-    font-size: 20px;
+    font-size: 1.2vw;
     font-family: proxima-nova, sans-serif;
     font-weight: 500;
     font-style: normal;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 1.8vw;
+    padding-right: 1.8vw;
 }
 
 .nav-item--active {
@@ -18,9 +18,9 @@
     text-decoration: none;
     color: #1c4961;
     opacity: 1;
-    font-size: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
+    font-size: 1.2vw;
+    padding-left: 1.8vw;
+    padding-right: 1.8vw;
     font-family: proxima-nova, sans-serif;
     font-weight: 700;
     font-style: normal;

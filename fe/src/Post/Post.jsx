@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { gql, useQuery, useMutation } from '@apollo/client';
+import { gql, useMutation } from '@apollo/client';
 /* eslint-disable object-shorthand */
 
 import './css/Post.css';
@@ -41,16 +41,21 @@ const DELETE_POST = gql`
   }
 `;
 
+const data = {
+  postId: '1',
+  userName: '에코노베이션',
+  content: 'dddd',
+  title: '에코노베이션 멋알 팀에서 에코노베이션 테크블로그를 제작하였습니다.',
+  mainCategoryNumber: '3',
+  categoryList: 'html, css, html, css, html, css, html, css, html, css, html, css, html, css, html, css, html, css, html, css, html, css, html, css',
+  createdDate: '2023/01/01 00:00:00',
+  views: '21',
+  hearts: '21',
+};
+
 const Post = function () {
   const navigate = useNavigate();
   const { id } = useParams();
-  const { data, loading } = useQuery(GET_POST, {
-    variables: {
-      postId: id,
-      userId: 1,
-    },
-  });
-  console.log('findPostByPostId', data);
   const [updateHeartState] = useMutation(SET_LIKED, {
     // eslint-disable-next-line no-shadow
     update(cache, { data: { updateHeartState } }) {
@@ -108,19 +113,18 @@ const Post = function () {
       },
     });
   };
-  if (loading) return null;
   return (
     <div className="post">
       <div className="post-middle">
-        <span className="post__title">{data.findPostByPostId.title}</span>
+        <span className="post__title">{data.title}</span>
         <PostInfo
-          author={data.findPostByPostId.userName}
-          date={data.findPostByPostId.createdDate}
-          views={data.findPostByPostId.views}
-          hearts={data.findPostByPostId.hearts}
+          author={data.userName}
+          date={data.createdDate}
+          views={data.views}
+          hearts={data.hearts}
           onDelete={onDelete}
         />
-        <Tags tags={data.findPostByPostId.categoryList} />
+        <Tags tags={data.categoryList} />
         <PostDesc />
         <Liked active={data.isHeart} setActive={() => onClick(data.isHeart)} />
       </div>
