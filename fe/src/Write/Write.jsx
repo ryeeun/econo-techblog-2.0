@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Editor } from '@toast-ui/react-editor';
@@ -13,9 +13,15 @@ import './css/Write.css';
 function Write() {
   const editorRef = useRef();
   const navigate = useNavigate();
+  const [categoryNum, setCategoryNum] = useState(0);
+  const [title, setTitle] = useState('');
+  const [hashtagList, setHashtagList] = useState([]);
+
   const onSubmit = () => {
+    // 카테고리, 제목, 본문 확인 로직 추가
     const contentHTML = editorRef.current?.getInstance().getHTML();
     const contentMarkdown = editorRef.current?.getInstance().getMarkdown();
+    console.log(categoryNum, title);
     console.log('contentHTML', contentHTML);
     console.log('contentMarkdown', contentMarkdown);
   };
@@ -38,21 +44,24 @@ function Write() {
           <span>*</span>
         </div>
         <div className="write-item__select">
-          <CategorySelectBox />
+          <CategorySelectBox
+            categoryNum={categoryNum}
+            setCategoryNum={setCategoryNum}
+          />
         </div>
         <div className="write-item">
           제목
           <span>*</span>
         </div>
         <div className="write-item__input">
-          <TitleInput />
+          <TitleInput setTitle={setTitle} />
         </div>
         <div className="write-item">
           태그
           <span>*</span>
         </div>
         <div className="write-item__input">
-          <HashtagInput />
+          <HashtagInput hashtagList={hashtagList} setHashtagList={setHashtagList} />
         </div>
         <div className="write-item">
           본문
