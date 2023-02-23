@@ -47,7 +47,7 @@ const data = {
   content: 'dddd',
   title: '에코노베이션 멋알 팀에서 에코노베이션 테크블로그를 제작하였습니다.',
   mainCategoryNumber: '3',
-  categoryList: 'html, css, html, css, html, css, html, css, html, css, html, css, html, css, html, css, html, css, html, css, html, css, html, css',
+  categoryList: 'HTML, CSS, React',
   createdDate: '2023/01/01 00:00:00',
   views: '21',
   hearts: '21',

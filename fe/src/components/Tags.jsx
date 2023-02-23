@@ -8,9 +8,9 @@ const Tags = function ({ tags }) {
   return (
     <div className="tags">
       {(tags ? tags.split(',') : []).map((elem) => (
-        <span key={elem} className="tag">
+        <div key={elem} className="tag">
           {`#${elem}`}
-        </span>
+        </div>
       ))}
     </div>
   );

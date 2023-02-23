@@ -2,13 +2,14 @@
     position: relative;
     height: 1.8vw;
     width: 0;
-    margin-right: 0.7vw;
+    margin-right: 0.2vw;
     display: flex;
     align-items: center;
     transition: width .5s linear;
 }
 
 .search--active {
+    height: 1.8vw;
     width: 15.6vw;
     background-color: #e2e2e2;
     border-radius: 1.1vw;
@@ -17,7 +18,7 @@
 .search-button{
     position: absolute;
     appearance: none;
-    height: 50%;
+    height: 60%;
     border: none;
     display: flex;
     align-items: center;
@@ -27,14 +28,16 @@
 }
 
 .search-button-img{
-    margin-right: 12px;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 0.5vw;
 }
 
 .search-input{
     appearance: none;
     height: 96%;
     width: 80%;
-    margin-left: 10px;
+    margin-left: 0.6vw;
     border: none;
     background-color:#f2f2f200;
     border-radius: 1vw 0 0 1vw;
