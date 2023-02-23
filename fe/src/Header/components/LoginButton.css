@@ -2,14 +2,14 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    height: 30px;
+    height: 1.8vw;
     text-align: center;
-    width: 90px;
+    width: 5.6vw;
     margin: 0;
     color : white;
     background-color: #ff9100;
     border: 1px #ff9100 solid;
-    border-radius: 17px;
+    border-radius: 1vw;
 }
 
 .login-button:hover{
@@ -22,5 +22,4 @@
     font-family: proxima-nova, sans-serif;
     font-weight: 400;
     font-style: normal;
-    letter-spacing: 1px;
 }

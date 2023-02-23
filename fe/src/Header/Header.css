@@ -2,7 +2,7 @@
     display: flex;
     position: sticky;
     align-items: center;
-    height: 70px;
+    height: 4.3vw;
     top: 0;
     left: 0;
     right: 0;
@@ -29,7 +29,7 @@
   display: flex;
   align-items: center;
   padding-left: auto;
-  padding-right: 50px;
+  padding-right: 3vw;
   margin-left: auto;
 }
 
@@ -37,7 +37,7 @@
   appearance: none;
   border: none;
   background-color: inherit;
-  margin-left: 20px;
+  margin-left: 1.2vw;
   height: 100%;
   display: flex;
   align-items: center;
@@ -55,17 +55,17 @@
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 0.9vw;
 }
 
 .header__user-img {
-    width: 35px;
-    height: 35px;
+    width: 2.2vw;
+    height: 2.2vw;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 0.6vw;
 }
 
 .header__user-name{
-  font-size: 17px;
+  font-size: 1.1vw;
   font-weight: 700;
 }

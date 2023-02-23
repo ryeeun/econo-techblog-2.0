@@ -1,5 +1,4 @@
 .home-banner{
-    height: 93vh;
     background-image: url('./img/main_bg.webp');
     background-size: cover;
     display: flex;
@@ -12,50 +11,50 @@
     transform: rotate(0.75turn);
     color: white;
     position: relative;
-    right: 60px;
+    right: 3vw;
     letter-spacing: 1px;
     font-family: proxima-nova, sans-serif;
     font-weight: 300;
-    font-size: 20px;
+    font-size: 1vw;
     font-style: normal;
     margin: 0;
 }
 
 .home-banner-middle{
     position: relative;
-    left: -30px;
+    left: 1vw;
     background-color: rgba(255, 255, 255, 0.171);
     border-radius: 25px;
-    margin: auto 0%;
+    margin: 8vw 0%;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 70px;
+    padding-left: 5vw;
 }
 
 .home-banner-middle h1{
-    font-size: 120px;
-    margin: 40px 70px 20px 0px;
+    font-size: 6vw;
+    margin: 3vw 5vw 1vw 0;
 }
 
 .home-banner-middle-typo {
-    width: 400px;
+    width: 20vw;
     object-fit: contain;
-    margin-bottom: 40px;
+    margin-bottom: 3vw;
 }
 
 .home-banner-button__container{
     position: relative;
-    top: 50px;
+    top: 3vw;
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    margin-right: 60px;
+    margin-right: 3vw;
 }
 
 .home-banner-button__container a{
-    margin-bottom: 25px;
+    margin-bottom: 1.5vw;
 }
 
 .home-banner__link{
@@ -64,7 +63,7 @@
 }
 
 .home-banner-button__container img {
-    height: 30px;
-    width: 30px;
+    height: 1.8vw;
+    width: 1.8vw;
     object-fit: cover;
 }

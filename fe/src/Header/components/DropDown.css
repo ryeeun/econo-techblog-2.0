@@ -2,34 +2,34 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 70px;
-    right: 0px;
+    top: 4.3vw;
+    right: 0;
     background-color: white;
-    padding: 0px 20px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    padding: 0px 1.2vw;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
 }
 
 .drop-down__btn {
     text-align: left;
-    padding: 13px;
+    padding: 0.8vw;
     list-style: none;
     text-decoration: none;
-    width: 150px;
+    width: 9.3vw;
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 0.9vw;
     color: #585858;
     border-bottom: solid 1px #bbbbbb70;;
 }
 
 .drop-down__logout {
     text-align: left;
-    padding: 13px;
+    padding: 0.8vw;
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 0.9vw;
     color: #585858;
 }

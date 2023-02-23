@@ -4,19 +4,19 @@
 }
 
 .footer__box {
-    height: 110px;
+    height: 6.7vw;
     width: 90%;
-    margin: 40px 0px ;
-    padding-left: 50px;
+    margin: 2.5vw 0 ;
+    padding-left: 3vw;
     display: flex;
     align-items: center;
     background-color: #2269fb;
     color: white;
-    border-radius: 18px;
+    border-radius: 1.2vw;
 }
 
 .footer__text {
-    font-size: 13px;
+    font-size: 0.8vw;
     font-family: proxima-nova, sans-serif;
     font-weight: 300;
     font-style: normal;
