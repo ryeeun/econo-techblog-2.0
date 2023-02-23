@@ -1,20 +1,22 @@
 .post-box {
     display: flex;
-    border-top: solid 2px #eee;
-    border-bottom: solid 2px #eee;
+    border-top: solid 0.1vw #eee;
+    border-bottom: solid 0.1vw #eee;
     align-items: center;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
 }
 
 .post-box__img {
-    width: 160px;
-    height: 160px;
-    border-radius: 15px;
+    width: 12vw;
+    height: 12vw;
+    border-radius: 1vw;
     background-color: #4e4e4e;
 }
 
 .post-box-info {
     flex: 7;
-    padding: 30px 40px;
+    padding: 1.8vw 2.5vw;
 }
 
 .post-box-info-top {
@@ -23,22 +25,24 @@
 }
 
 .post-box-info__title {
-    font-weight: bold;
-    font-size: 18px;
-    margin-right: 20px;
+    width: 50%;
+    font-weight: 700;
+    font-size: 1.1vw;
+    margin-right: 1.2vw;
     color: #000;
 }
 
 .post-box-info-middle {
-    margin: 10px 0px;
+    margin: 0.6vw 0;
     display: flex;
     align-items: flex-start;
-    width: 900px;
-    height: 80px;
+    height: 6vw;
+    width: 80%;
 }
 
 .post-box-info__content {
-    font-size: 12px;
+    font-weight: 400;
+    font-size: 0.9vw;
     color: rgba(0,0,0,0.7);
     line-height: 1.6;
     display: -webkit-box;
@@ -61,11 +65,14 @@
 .post-box-info-author {
     display: flex;
     align-items: center;
+    font-weight: 400;
+    font-size: 0.9vw;
+    color: #7f7f7f;
 }
 
 .post-box-info-author__img{
-    width: 30px;
-    height: 30px;
+    width: 2vw;
+    height: 2vw;
     border-radius: 70%;
-    margin-left: 10px;
+    margin-left: 0.6vw;
 }

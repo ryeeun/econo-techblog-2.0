@@ -1,43 +1,54 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { gql, useMutation } from '@apollo/client';
 
 import '../css/Official.css';
 import noImg from '../img/no_img.png';
 import PostDetails from '../../components/PostDetails';
 import Tags from '../../components/Tags';
 
-const FIND_OFFICIAL = gql`
-  mutation findOfficial {
-    findOfficial {
-      postId
-      userName
-      content
-      title
-      mainCategoryNumber
-      categoryName
-      createdDate
-      views
-      hearts
-    }
-  }
-`;
+const data = [
+  {
+    postId: '1',
+    userName: '에코노베이션',
+    content: 'dddd',
+    title: '1에코노베이션 멋알',
+    mainCategoryNumber: '3',
+    categoryList: 'HTML, CSS, React',
+    createdDate: '2023/01/01 00:00:00',
+    views: '21',
+    hearts: '21',
+  },
+  {
+    postId: '2',
+    userName: '에코노베이션',
+    content: 'dddd',
+    title: '2에코노베이션 멋알',
+    mainCategoryNumber: '3',
+    categoryList: 'HTML, CSS, React',
+    createdDate: '2023/01/01 00:00:00',
+    views: '21',
+    hearts: '21',
+  },
+  {
+    postId: '3',
+    userName: '에코노베이션',
+    content: 'dddd',
+    title: '3에코노베이션 멋알',
+    mainCategoryNumber: '3',
+    categoryList: 'HTML, CSS, React',
+    createdDate: '2023/01/01 00:00:00',
+    views: '21',
+    hearts: '21',
+  },
+];
 
 const Official = function () {
-  const [officialPosts, setOfficialPosts] = useState([]);
-  const [currentPost, setCurrentPost] = useState();
+  const [officialPosts, setOfficialPosts] = useState(data);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [findOfficial, { loading }] = useMutation(FIND_OFFICIAL, {
-    // eslint-disable-next-line no-shadow
-    onCompleted(data) {
-      console.log('findOfficial', data.findOfficial);
-      setOfficialPosts(data.findOfficial);
-    },
-  });
+
   useEffect(() => {
-    console.log('여기!!!!');
-    findOfficial();
+    setOfficialPosts(data);
   }, []);
 
   useEffect(() => {
@@ -50,32 +61,28 @@ const Official = function () {
       });
     }, 3500);
     return () => clearTimeout(timeoutId);
-  }, [officialPosts]);
-
-  useEffect(() => {
-    setCurrentPost(officialPosts[currentIndex]);
-  }, [currentIndex, officialPosts]);
+  }, [currentIndex]);
 
   const onClick = (direction) => {
     setCurrentIndex(direction);
   };
 
-  if (loading || !currentPost) return null;
+  if (officialPosts === undefined) return null;
   return (
     <div className="official">
       <Link
-        to={`/post/${currentPost.postId}`}
+        to={`/post/${officialPosts[currentIndex].postId}`}
         style={{ textDecoration: 'none' }}
       >
         <div className="official-post">
           <div className="official__img" />
           <div className="official-info">
             <div className="official-info-top">
-              <span className="official-title">{currentPost.title}</span>
-              <Tags tags={currentPost.categoryName} />
+              <span className="official-title">{officialPosts[currentIndex].title}</span>
+              <Tags tags={officialPosts[currentIndex].categoryList} />
             </div>
             <div className="official-info-middle">
-              <span className="official-info__content">랄라라라</span>
+              <span className="official-info__content">에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션</span>
             </div>
             <div className="official-info-bottom">
               <div className="official-info-bottom-left">
@@ -85,13 +92,13 @@ const Official = function () {
                   className="official-info-bottom-left__img"
                 />
                 <span className="official-info-bottom-left__span">
-                  {currentPost.userName}
+                  {officialPosts[currentIndex].userName}
                 </span>
               </div>
               <PostDetails
-                date="2022.05.04"
-                views={currentPost.views}
-                hearts={currentPost.hearts}
+                date="2023/01/01 00:00:00"
+                views={officialPosts[currentIndex].views}
+                hearts={officialPosts[currentIndex].hearts}
               />
             </div>
           </div>

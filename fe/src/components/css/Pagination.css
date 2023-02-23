@@ -1,18 +1,18 @@
 .pagination {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 2vw;
 }
 
 ul {
     list-style: none;
-    padding: 0px;
+    padding: 0;
 }
 
 ul.pagination li {
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 2vw;
+    height: 2vw;
 }
 
 ul.pagination li:first-child,

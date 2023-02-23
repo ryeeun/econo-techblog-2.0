@@ -26,8 +26,8 @@ const PostDetails = function ({ date, views, hearts }) {
 
 PostDetails.propTypes = {
   date: PropTypes.string.isRequired,
-  views: PropTypes.number.isRequired,
-  hearts: PropTypes.number.isRequired,
+  views: PropTypes.string.isRequired,
+  hearts: PropTypes.string.isRequired,
 };
 
 export default PostDetails;

@@ -16,7 +16,7 @@ const PostBox = function ({ post }) {
         <div className="post-box-info">
           <div className="post-box-info-top">
             <span className="post-box-info__title">{post.title}</span>
-            <Tags tags={post.categoryName} />
+            <Tags tags={post.categoryList} />
           </div>
           <div className="post-box-info-middle">
             <span className="post-box-info__content">{post.content}</span>
