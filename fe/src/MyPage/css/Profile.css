@@ -1,64 +1,69 @@
 .profile{
-    width: 280px;
+    width: 20%;
     font-family: 'Noto Sans KR';
     font-style: normal;
-    margin-right: 40px;
+    margin-right: 3vw;
 }
 
 .profile h3{
-    margin-top: 0px;
-    margin-bottom: 10px;
+    font-size: 1.1vw;
+    margin-top: 0;
+    margin-bottom: 0.6vw;
     color: white;
+}
+
+.profile p {
+    margin: 0.5vw 0;
 }
 
 .profile-container-top{
     display: flex;
-    margin-bottom: 20px;
-    justify-content: space-around;
+    margin-bottom: 1.2vw;
+    justify-content: center;
     align-items: center;
     background-color: white;
-    border: 2px solid #f1f1f1;
-    border-radius: 15px;
+    border: 0.1vw solid #f1f1f1;
+    border-radius: 1vw;
+    padding-top: 1.2vw;
+    padding-bottom: 1.2vw;
 }
 
 .profile__img {
-    width: 90px;
-    height: 90px;
+    width: 30%;
     object-fit: cover;
-    margin-left: 20px;
+    margin-right: 1vw;
 }
 
 .profile-user {
-    width: 150px;
+    width: 50%;
     text-align: left;
-    margin: 20px;
 }
 
 .profile-user p {
-    margin: 10px 0px;
+    margin: 0.6vw 0;
 }
 
 .profile-user-name {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1.1vw;
 }
 
 .profile-text {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.8vw;
     color: rgba(0, 0, 0, 0.705);
 }
 
 .profile-container-bottom{
     background-color: white;
     display: flex;
-    border: 2px solid #f1f1f1;
-    border-radius: 15px;
+    border: 0.1vw solid #f1f1f1;
+    border-radius: 1vw;
     justify-content: space-around;
     text-align: center;
 }
 
 .profile-container-bottom-count {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1.2vw;
 }

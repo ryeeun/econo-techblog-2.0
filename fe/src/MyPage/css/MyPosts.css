@@ -8,57 +8,60 @@
 }
 
 .my-posts{
+    width: 70%;
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 500;
 }
 .my-posts h3{
+    font-size: 1.1vw;
     color: white;
-    margin-top: 0px;
-    margin-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 0.6vw;
 }
 
 .my-posts-group__nav {
-    margin-top: 15px;
+    margin-top: 1vw;
 }
 
 .my-posts-nav__button{
     position: relative;
-    top: 4px;
+    top: 0.2vw;
     appearance: none;
     border: none;
     background-color: white;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.1vw;
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 500;
-    width: 100px;
-    height: 50px;
+    width: 6.2vw;
+    color: black;
+    height: 3vw;
     padding: 0;
     z-index: 1;
 }
 
 .nav__button--active{
     position: relative;
-    top: 4px;
-    font-size: 18px;
+    top: 0.2vw;
+    font-size: 1.1vw;
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 700;
     animation-name: fadeIn;
     animation-duration: 1s;
-    height: 50px;
+    height: 3vw;
     padding: 0;
     z-index: 10;
 }
 
 .nav__button--active .my-posts-group__nav-bar {
     width: 100%;
-    height: 7px;
+    height: 0.4vw;
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     background-color: #2269fb;
-    border-radius: 15px;
+    border-radius: 1vw;
 }
 
