@@ -2,19 +2,22 @@
     display: flex;
     align-items: center;
     color: #7f7f7f;
-    font-size: 15px;
+    font-size: 1vw;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
 }
 
 .post-details__img {
-    height: 12px;
-    margin-top: 3px;
-    margin-right: 10px;
+    height: 0.7vw;
+    margin-top: 0.1vw;
+    margin-right: 0.6vw;
 }
 
 .post-details__bar {
-    margin-top: 7px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-bottom: 4px;
-    height: 14px;
+    margin-top: 0.4vw;
+    margin-left: 0.6vw;
+    margin-right: 0.6vw;
+    padding-bottom: 0.2vw;
+    height: 0.8vw;
 }

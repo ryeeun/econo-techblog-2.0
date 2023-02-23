@@ -1,8 +1,18 @@
+.tags {
+    width: 98%;
+    margin: 0 auto;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+}
+
 .tag {
-    font-size: 12px;
-    border-radius: 13px;
+    display: inline-block;
+    font-size: 0.7vw;
+    border-radius: 0.8vw;
     color: #fff;
     background-color: #96b3ed;
-    padding: 4px 10px 4px 10px;
-    margin-right: 10px;
+    padding: 0.2vw 0.6vw;
+    margin-right: 0.6vw;
+    margin-bottom: 0.5vw;
 }

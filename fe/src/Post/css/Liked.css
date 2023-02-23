@@ -1,28 +1,28 @@
 .liked {
-    margin: 50px 0px;
+    margin: 3vw 0;
 }
 
 .liked__button {
     display: flex;
-    align-items: center;
-    border-radius: 39px;
-    border: solid 1px #bbb;
+    align-items: center;;
+    border-radius: 2.4vw;
+    border: solid 0.1vw #bbb;
     background-color: #fff;
-    padding: 9px 17px;
+    padding: 0.5vw 1vw;
     color: #999;
     margin-left: auto;
 }
 
 .liked__span {
-    font-size: 12px;
+    font-size: 0.8vw;
 }
 
 .liked__img {
-    width: 13px;
-    margin-left: 5px;
+    width: 0.8vw;
+    margin-left: 0.3vw;
 }
 
 .liked__button--on {
     color: #ff3535;
-    border: solid 1px #ff3535;
+    border: solid 0.1vw #ff3535;
 }

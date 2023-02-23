@@ -1,8 +1,9 @@
 .post-info {
-    margin-top: 50px;
-    padding-bottom: 10px;
-    border-bottom: solid 1px #bbb;
-    margin-bottom: 20px;
+    position: relative;
+    margin-top: 3vw;
+    padding-bottom: 0.6vw;
+    border-bottom: solid 0.1vw #bbb;
+    margin-bottom: 1.2vw;
 }
 
 .post-info__content {
@@ -18,16 +19,20 @@
 .post-info-author {
     display: flex;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 1.2vw;
     color: #7f7f7f;
-    font-size: 15px;
+    font-size: 1vw;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
 }
 
 .post-info-author__img {
-    width: 40px;
-    height: 40px;
+    width: 2.5vw;
+    height: 2.5vw;
+    object-fit: cover;
     border-radius: 70%;
-    margin-right: 10px;
+    margin-right: 0.6vw;
 }
 
 .post-info__button {
@@ -37,5 +42,5 @@
 }
 
 .post-info__img {
-    width: 20px;
+    width: 1.2vw;
 }
