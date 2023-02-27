@@ -1,32 +1,34 @@
 .write{
     margin: auto;
     width: 80%;
-    font-family: 'Noto Sans KR';
-    font-style: normal;
 }
 
 .write-title{
     color: #4e87fb;
-    font-weight: 500;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2vw;
 }
 
 .write__grid{
     display: grid;
     align-items: center;
-    grid-template-rows: 8vh 8vh 8vh 70vh;
+    grid-template-rows: 4vw 4vw 4vw 35vw;
     grid-template-columns: 20% 80%;
-    row-gap: 2px;
+    row-gap: 0.1vw;
 }
 
 .write-item{
     display: flex;
-    padding-left: 20px;
+    padding-left: 1.2vw;
     background-color: #f2f2f2;
     text-align: left;
     align-items: center;
     height: 100%;
-    border-bottom: 2px solid #d5d5d5;
+    border-bottom: 0.1vw solid #d5d5d5;
     font-weight: 500;
+    font-size: 0.9vw;
 }
 
 .write-item span{
@@ -38,7 +40,7 @@
     align-items: center;
     justify-content: right;
     height: 100%;
-    border-bottom: 2px solid #d5d5d5;
+    border-bottom: 0.1vw solid #d5d5d5;
    
 }
 .write-item__input{
@@ -46,50 +48,49 @@
     align-items: center;
     justify-content: right;
     height: 100%;
-    border-bottom: 2px solid #d5d5d5;
-
+    border-bottom: 0.1vw solid #d5d5d5;
 }
 
 .write-editor{
     height: 100%;
     position: relative;
-    top: -2px;
+    top: -0.1vw;
 }
 
 .write-button__container{
     display: flex;
     justify-content: right;
-    margin-top: 20px;  
+    margin-top: 1.2vw;  
 }
 
 .write-submit__button{
     background-color: #4e87fb;
     color: white;
-    margin: 5px;
+    margin: 0.3vw;
     border: none;
-    border-radius: 5px;
-    height: 40px;
-    width: 114px;
+    border-radius: 0.3vw;
+    height: 2.5vw;
+    width: 7vw;
     cursor: pointer;
-    margin-bottom: 100px; 
+    margin-bottom: 6vw; 
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 1vw;
 }
 
 .write-cancel__button{
     background-color: #d2d2d2;
     color: black;
     border: none;
-    margin: 5px;
-    border-radius: 5px;
-    height: 40px;
-    width: 114px;
+    margin: 0.3vw;
+    border-radius: 0.3vw;
+    height: 2.5vw;
+    width: 7vw;
     cursor: pointer;
-    margin-bottom: 100px; 
+    margin-bottom: 6vw; 
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 1vw;
 }
