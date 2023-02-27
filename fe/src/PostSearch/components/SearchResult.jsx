@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 // import { useParams } from 'react-router-dom';
 import Pagination from 'react-js-pagination';
 import { gql, useQuery } from '@apollo/client';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import PropTypes from 'prop-types';
 
 import '../css/SearchResult.css';
 import '../../components/css/Pagination.css';
@@ -29,7 +31,7 @@ const GET_SEARCH = gql`
   }
 `;
 
-const SearchResult = function () {
+const SearchResult = function ({ keyword }) {
   // const { currentKeyword } = useParams();
   const [navArr, setArr] = useState([
     {
@@ -55,7 +57,6 @@ const SearchResult = function () {
   ]);
   const [currCategory, setCurrCategory] = useState(0);
   const [currentPosts, setCurrentPosts] = useState([]);
-  const keyword = '멋';
   const [currentPage, setCurrentPage] = useState(0);
   const { data } = useQuery(GET_SEARCH, {
     variables: {
@@ -119,6 +120,10 @@ const SearchResult = function () {
       </div>
     </div>
   );
+};
+
+SearchResult.propTypes = {
+  keyword: PropTypes.string.isRequired,
 };
 
 export default SearchResult;
