@@ -63,9 +63,9 @@ function Header() {
       </button>
       <ul className="header-nav-button-box">
         <NavItem navName="Home" link="/" />
-        <NavItem navName="Tech" link="/tech" />
-        <NavItem navName="Culture" link="/culture" />
-        <NavItem navName="Trouble Shooting" link="/troubleshooting" />
+        <NavItem navName="Tech" link="/posts/1" />
+        <NavItem navName="Culture" link="/posts/2" />
+        <NavItem navName="Trouble Shooting" link="/posts/3" />
       </ul>
       <div className="header-right-box">
         <Search />
