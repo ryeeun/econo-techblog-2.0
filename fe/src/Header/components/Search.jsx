@@ -15,6 +15,8 @@ function Search() {
   };
 
   const onSubmit = () => {
+    setText('');
+    setIsSearchBarOn(false);
     navigate('/search', { state: { value: text } });
   };
 
@@ -25,8 +27,7 @@ function Search() {
   };
 
   const onClick = () => {
-    if (text !== '') onSubmit();
-    setText('');
+    if (text !== '' && isSearchBarOn) onSubmit();
     setIsSearchBarOn(() => !isSearchBarOn);
   };
 
