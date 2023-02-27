@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { useNavigate } from 'react-router-dom';
 
@@ -6,6 +6,7 @@ import searchButton from '../img/search_button.png';
 import './Search.css';
 
 function Search() {
+  const ref = useRef();
   const [text, setText] = useState('');
   const navigate = useNavigate();
   const [isSearchBarOn, setIsSearchBarOn] = useState(false);
@@ -29,8 +30,21 @@ function Search() {
     setIsSearchBarOn(() => !isSearchBarOn);
   };
 
+  const handleClickOutSide = (e) => {
+    if (isSearchBarOn && !ref.current.contains(e.target)) {
+      setIsSearchBarOn(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('click', handleClickOutSide);
+    return () => {
+      window.removeEventListener('click', handleClickOutSide);
+    };
+  });
+
   return (
-    <div className={['search', isSearchBarOn && 'search--active'].join(' ')}>
+    <div ref={ref} className={['search', isSearchBarOn && 'search--active'].join(' ')}>
       {isSearchBarOn && (
         <input
           className="search-input"
