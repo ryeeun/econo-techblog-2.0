@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-autofocus */
 import React, { useState, useRef, useEffect } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { useNavigate } from 'react-router-dom';
@@ -52,6 +53,7 @@ function Search() {
           onChange={onChange}
           value={text}
           onKeyDown={handleOnKeyPress}
+          autoFocus
         />
       )}
       <button className="search-button" type="submit" onClick={onClick}>
