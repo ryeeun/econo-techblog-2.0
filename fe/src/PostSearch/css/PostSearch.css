@@ -1,9 +1,8 @@
-
 .post-search-top {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 130px;
+    height: 9vw;
     background-color: #f2f2f2;
 }
