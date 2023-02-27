@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Pagination from 'react-js-pagination';
-import { gql, useQuery } from '@apollo/client';
 
 import { useLoginStateContext } from '../Context/LoginContext';
 import './css/Tech.css';
@@ -10,45 +9,64 @@ import write from './img/write.png';
 import Banner from './components/Banner';
 import Official from './components/Official';
 import PostBox from '../components/PostBox';
+import Footer from '../Footer/Footer';
 
-const GET_POSTS = gql`
-  query findAllPosts($mainCategoryNumber: Int!, $page: Int!) {
-    postCounts(mainCategoryNumber: $mainCategoryNumber)
-    findAllPosts(mainCategoryNumber: $mainCategoryNumber, page: $page) {
-      postId
-      userName
-      content
-      title
-      mainCategoryNumber
-      categoryName
-      createdDate
-      views
-      hearts
-    }
-  }
-`;
+const data = [
+  {
+    postId: '1',
+    userName: '에코노베이션',
+    content: '에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션',
+    title: '에코노베이션',
+    mainCategoryNumber: '3',
+    categoryList: 'HTML, CSS, React',
+    createdDate: '2023/01/01 00:00:00',
+    views: '21',
+    hearts: '21',
+  },
+  {
+    postId: '2',
+    userName: '에코노베이션',
+    content: 'dddd',
+    title: '에코노베이션 멋알',
+    mainCategoryNumber: '3',
+    categoryList: 'HTML, CSS, React',
+    createdDate: '2023/01/01 00:00:00',
+    views: '21',
+    hearts: '21',
+  },
+  {
+    postId: '3',
+    userName: '에코노베이션',
+    content: 'dddd',
+    title: '에코노베이션 멋알 팀에서 에코노베이션 테크블로그를 제작하였습니다.',
+    mainCategoryNumber: '3',
+    categoryList: 'HTML, CSS, React',
+    createdDate: '2023/01/01 00:00:00',
+    views: '21',
+    hearts: '21',
+  },
+  {
+    postId: '4',
+    userName: '에코노베이션',
+    content: 'dddd',
+    title: '에코노베이션 멋알 팀에서 에코노베이션 테크블로그를 제작하였습니다.',
+    mainCategoryNumber: '3',
+    categoryList: 'HTML, CSS, React',
+    createdDate: '2023/01/01 00:00:00',
+    views: '21',
+    hearts: '21',
+  },
+];
 
 const Tech = function () {
-  const { category } = useParams();
+  // const { category } = useParams();
   const loginContext = useLoginStateContext();
-  const [currentPosts, setCurrentPosts] = useState([]);
+  // const [currentPosts, setCurrentPosts] = useState(data);
   const [currentPage, setCurrentPage] = useState(0);
-  const { data } = useQuery(GET_POSTS, {
-    variables: {
-      mainCategoryNumber: category,
-      page: currentPage,
-    },
-  });
-  console.log('findAllPosts', data);
   const navigate = useNavigate();
   const onClick = () => {
     navigate('/write');
   };
-  useEffect(() => {
-    if (data) {
-      setCurrentPosts(data.findAllPosts);
-    }
-  }, [data]);
   useEffect(() => {
     // 페이지 바뀌면 스크롤 맨위로 이동
     window.scrollTo(0, 0);
@@ -63,7 +81,7 @@ const Tech = function () {
             <button
               type="button"
               className={
-                loginContext.id === -1
+                loginContext.id === 1
                   ? 'tech-write_button tech-write_button--hidden'
                   : 'tech-write_button'
               }
@@ -77,13 +95,13 @@ const Tech = function () {
         </div>
         <div className="tech-recent">
           <p className="tech__title">Recent posts</p>
-          {currentPosts.map((item) => (
+          {data.map((item) => (
             <PostBox key={item.postId} post={item} />
           ))}
           <Pagination
             activePage={currentPage}
             itemsCountPerPage={7}
-            totalItemsCount={data ? data.postCounts : 0}
+            totalItemsCount={data ? data.length : 0}
             pageRangeDisplayed={5}
             prevPageText="<"
             nextPageText=">"
@@ -91,6 +109,7 @@ const Tech = function () {
           />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

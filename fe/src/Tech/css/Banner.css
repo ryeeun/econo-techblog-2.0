@@ -2,7 +2,9 @@
     background-color: #2269fb;
     color: #fff;
     font-weight: 500;
-    padding: 50px 0px;
+    padding: 3vw 0;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
 }
 
 .banner-text {
@@ -11,11 +13,14 @@
     margin-right: auto;
 }
 
-.banner__ h2 {
-    font-size: 30px;
+.banner__h2 {
+    font-size: 1.8vw;
+    font-weight: 500;
+    margin: 0.8vw 0;
 }
 
 .banner__p {
-    font-size: 15px;
+    font-size: 1vw;
     line-height: 1.8;
+    font-weight: 400;
 }

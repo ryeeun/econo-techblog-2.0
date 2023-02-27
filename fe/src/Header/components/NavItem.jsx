@@ -6,22 +6,21 @@ import PropTypes from 'prop-types';
 import './NavItem.css';
 
 function NavItem({ navName, link }) {
-  let { pathname } = useLocation();
-  const { category } = useParams();
-  pathname = null;
-
+  const { pathname } = useLocation('');
+  const { category } = useParams('');
   const [pageName, setPageName] = useState('');
+
   useEffect(() => {
-    if (pathname === null) setPageName('Home');
-    else if (pathname === 'posts') {
+    if (pathname === '/') setPageName('Home');
+    else if (pathname.split('/')[1] === 'posts') {
       switch (category) {
-        case 1:
+        case '1':
           setPageName('Tech');
           break;
-        case 2:
+        case '2':
           setPageName('Culture');
           break;
-        case 3:
+        case '3':
           setPageName('Trouble Shooting');
           break;
         default:

@@ -1,18 +1,22 @@
 .search-nav-item {
     position: relative;
-    top: 3.5px;
+    top: 0.2vw;
     color: #000;
     opacity: 0.5;
-    margin-right: 100px;
+    margin-right: 6vw;
     text-align: start;
-    padding-left: 7px;
-    padding-right: 7px;
-    padding-bottom: 15px;
+    padding-left: 0.4vw;
+    padding-right: 0.4vw;
+    padding-bottom: 1vw;
     cursor: pointer;
+    font-size: 0.9vw;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
 }
 
 .search-nav-item--active {
     color: #000;
     opacity: 1;
-    border-bottom: solid 5px #000;
+    border-bottom: solid 0.3vw #000;
 }

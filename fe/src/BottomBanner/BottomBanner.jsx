@@ -15,14 +15,14 @@ const BottomBanner = function () {
             <br />
             그리고 함께 개발하는 공간이 되는 것을 꿈꿉니다.
           </span>
-          <button className="bottom-banner-btn" type="button">
+          <a className="bottom-banner-link" href="https://econovation.kr/about">
             <span>웹사이트 바로가기</span>
             <img
               src={econoGo}
               alt="econo-go"
-              className="bottom-banner-btn__img"
+              className="bottom-banner-link__img"
             />
-          </button>
+          </a>
         </div>
       </div>
     </div>

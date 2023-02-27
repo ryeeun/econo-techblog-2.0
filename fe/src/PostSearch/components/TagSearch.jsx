@@ -1,25 +1,31 @@
-import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import search from '../img/search.png';
 import '../css/TagSearch.css';
 
-const TagSearch = function ({ setValue, value }) {
+const TagSearch = function () {
+  const [text, setText] = useState('');
+  const navigate = useNavigate();
   const onChange = (e) => {
-    setValue(() => e.target.value);
+    setText(() => e.target.value);
+  };
+  const onSubmit = () => {
+    navigate('/search', { state: { value: text } });
+  };
+  const handleOnKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      onSubmit();
+    }
   };
   return (
     <div className="tag-search">
-      <input className="tag-search__input" onChange={onChange} value={value} />
-      <img src={search} alt="search" className="tag-search__img" />
+      <input className="tag-search__input" onChange={onChange} value={text} onKeyDown={handleOnKeyPress} />
+      <button className="tag-search-btn" type="submit" onClick={onSubmit}>
+        <img src={search} alt="search" className="tag-search__img" />
+      </button>
     </div>
   );
-};
-
-TagSearch.propTypes = {
-  setValue: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired,
 };
 
 export default TagSearch;

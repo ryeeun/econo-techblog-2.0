@@ -45,10 +45,10 @@
     margin-right: 4vw;
 }
 
-.bottom-banner-btn{
+.bottom-banner-link{
     width: 70%;
     height: 3.2vw;
-    border: none;
+    text-decoration: none;
     border-radius: 2.2vw;
     background-color: white;
     color: #0076ff;
@@ -63,6 +63,6 @@
     font-size: 0.9vw;
 }
 
-.bottom-banner-btn__img {
-    height: 1vw;
+.bottom-banner-link__img {
+    height: 0.9vw;
 }

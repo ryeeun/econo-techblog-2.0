@@ -2,24 +2,33 @@
     display: flex;
     align-items: center;
     width: fit-content;
-    padding: 2px 15px;
-    border-radius: 28px;
-    border: solid 1px #d9d9d9;
-    background-color: #fff
+    padding: 0.1vw 1vw;
+    border-bottom: solid 0.12vw #5f5f5f;
+    background-color: inherit
 }
 
 .tag-search__input {
     border: none;
     background-color: inherit;
-    width: 300px;
-    height: 30px;
+    width: 17vw;
+    height: 2vw;
+    margin-right: 0.6vw;
     color: #2269fa;
+    font-size: 1vw;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
 }
 
 .tag-search__input:focus {
     outline: none;
 }
 
+.tag-search-btn {
+    border: none;
+    background-color: inherit;
+}
+
 .tag-search__img {
-    height: 14px;
+    height: 1vw;
 }
