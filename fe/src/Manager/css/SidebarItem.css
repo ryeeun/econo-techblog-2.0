@@ -3,13 +3,16 @@
     align-items: center;
     justify-content: space-between;
     background-color: #fff;
-    border-radius: 15px;
-    padding: 14px 20px;
-    margin-top: 10px;
+    border-radius: 0.9vw;
+    padding: 0.9vw 1.2vw;
+    margin-top: 0.7vw;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
 }
 
 .sidebar-item__name {
-    font-size: 15px;
+    font-size: 0.9vw;
     font-weight: 500;
     color: #292929;
 }
@@ -19,12 +22,12 @@
 }
 
 .sidebar-item-right__img {
-    width: 16px;
-    margin-right: 3px;
+    width: 1vw;
+    margin-right: 0.1vw;
 }
 
 .sidebar-item-right__num {
-    font-size: 14px;
+    font-size: 0.8vw;
     font-weight: 500;
     color: #000;
     opacity: 0.5;
@@ -34,6 +37,6 @@
     background-color: #2269fa;
 }
 
-.sidebar-item--selected > .sidebar-item__name {
+.sidebar-item--selected .sidebar-item__name {
     color: #fff;
 }

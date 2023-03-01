@@ -1,16 +1,19 @@
 .userinfo {
     width: 90%;
-    margin: 50px auto 0px auto;
+    margin: 3.1vw auto 0 auto;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
 }
 
 .userinfo-top {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 1.8vw;
 }
 
 .userinfo__img {
     width: 100px;
-    margin-right: 30px;
+    margin-right: 1.8vw;
 }
 
 .userinfo-spec {
@@ -21,18 +24,18 @@
 }
 
 .userinfo__name {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 1.1vw;
+    font-weight: 700;
 }
 
 .userinfo-delete__button {
-    height: 30px;
-    width: 85px;
+    height: 1.8vw;
+    width: 5.3vw;
     margin-top: auto;
     margin-left: auto;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3vw;
     background-color: #d2d2d2;
-    font-size: 12px;
+    font-size: 0.7vw;
     font-weight: 500;
 }
