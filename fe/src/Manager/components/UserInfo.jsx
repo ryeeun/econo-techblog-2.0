@@ -17,6 +17,14 @@ const DELETE_POST = gql`
   }
 `;
 
+const testUser = {
+  uid: 1,
+  name: '이윤성',
+  email: '191111@jnu.ac.kr',
+  role: '일반회원',
+  year: 21,
+};
+
 const UserInfo = function () {
   const { id } = useParams();
   const [user, setUser] = useState({});
@@ -31,7 +39,7 @@ const UserInfo = function () {
       .get(`http://168.131.30.127:8080/api/user/${id}`)
       .then((response) => {
         setUser(response.data);
-        console.log('response', response);
+        console.log(user);
       })
       .catch((error) => {
         console.log('erroe', error);
@@ -60,9 +68,9 @@ const UserInfo = function () {
       <div className="userinfo-top">
         <img src={noImg} alt="no profile" className="userinfo__img" />
         <div className="userinfo-spec">
-          <span className="userinfo__name">{user.userName}</span>
-          <span>{user.userEmail}</span>
-          <span>{`${user.year}기  |  ${user.role}`}</span>
+          <span className="userinfo__name">{testUser.name}</span>
+          <span>{testUser.email}</span>
+          <span>{`${testUser.year}기  |  ${testUser.role}`}</span>
           <span>작성글 6</span>
         </div>
         <button
@@ -73,7 +81,7 @@ const UserInfo = function () {
           삭제
         </button>
       </div>
-      <PostList uid={id} onChange={onChange} />
+      <PostList uid={testUser.uid} onChange={onChange} />
     </div>
   );
 };

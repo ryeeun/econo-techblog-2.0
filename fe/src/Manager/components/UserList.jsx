@@ -13,6 +13,44 @@ import settings from '../img/settings.png';
 import SettingBox from './SettingBox';
 import RoleSelectBox from './RoleSelectBox';
 
+const testUser = [
+  {
+    uid: 1,
+    name: '이윤성',
+    email: '191111@jnu.ac.kr',
+    role: '관리자',
+    year: '21기',
+  },
+  {
+    uid: 2,
+    name: '이윤성',
+    email: '191111@jnu.ac.kr',
+    role: '관리자',
+    year: '21기',
+  },
+  {
+    uid: 3,
+    name: '이윤성',
+    email: '191111@jnu.ac.kr',
+    role: '관리자',
+    year: '21기',
+  },
+  {
+    uid: 4,
+    name: '이윤성',
+    email: '191111@jnu.ac.kr',
+    role: '관리자',
+    year: '21기',
+  },
+  {
+    uid: 5,
+    name: '이윤성',
+    email: '191111@jnu.ac.kr',
+    role: '관리자',
+    year: '21기',
+  },
+];
+
 const UserList = function () {
   const { role } = useParams();
   const columns = ['', '이름', '이메일', '사용자 타입', '기수', '설정'];
@@ -142,13 +180,13 @@ const UserList = function () {
           </tr>
         </thead>
         <tbody>
-          {users.map(({ id, userName, userEmail, role, year }) => (
-            <tr key={id} className="table__tr">
+          {testUser.map(({ uid, name, email, role, year }) => (
+            <tr key={uid} className="table__tr">
               <td>
                 <input
                   type="checkbox"
                   name="user"
-                  value={id}
+                  value={uid}
                   className="postlist-table__checkbox"
                   onChange={(e) => onChange(e.target.checked, e.target.value)}
                 />
@@ -156,10 +194,10 @@ const UserList = function () {
               <td>
                 <div className="table-user">
                   <img src={noImg} alt="noImg" className="table-user__img" />
-                  <span className="table-user__name">{userName}</span>
+                  <span className="table-user__name">{name}</span>
                 </div>
               </td>
-              <td>{userEmail}</td>
+              <td>{email}</td>
               <td>{role}</td>
               <td>{year}</td>
               <td className="userlist-setting">
@@ -171,7 +209,7 @@ const UserList = function () {
                   />
                 </button>
                 <div className="userlist-setting-box">
-                  <SettingBox id={id} />
+                  <SettingBox id={uid} />
                 </div>
               </td>
             </tr>

@@ -11,10 +11,10 @@ import '../css/SidebarItem.css';
 import people from '../img/people.png';
 
 const SidebarItem = function ({ id, name, num, isSelected, onClick }) {
-  const param = ['request', 'all', 'USER', 'GUEST', 'ADMIN'];
+  const param = ['all', 'USER', 'GUEST', 'ADMIN'];
   return (
     <Link
-      to={id === 1 ? '/admin/regist' : `/admin/role/${param[id - 1]}`}
+      to={`/admin/role/${param[id - 1]}`}
       style={{ textDecoration: 'none' }}
     >
       <div
