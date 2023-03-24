@@ -10,7 +10,6 @@ import Search from './components/Search';
 import DropDown from './components/DropDown';
 import logo from './img/tecono_logo.png';
 import './Header.css';
-import { useLoginStateContext } from '../Context/LoginContext';
 import noImg from '../components/img/no_img.png';
 
 function Header() {
@@ -19,7 +18,6 @@ function Header() {
   const [isLogin, setIsLogin] = useState(false);
   const [isOpen, setOpen] = useState(false);
 
-  const loginContext = useLoginStateContext();
   // eslint-disable-next-line no-unused-vars
   const navigate = useNavigate();
 
@@ -32,7 +30,6 @@ function Header() {
   };
 
   const handleClickOutSide = (e) => {
-    console.log(ref.current.contains(e.target));
     if (isOpen && !ref.current.contains(e.target)) {
       setOpen(false);
     }
@@ -45,13 +42,6 @@ function Header() {
     };
   });
 
-  useEffect(() => {
-    if (loginContext.id === -1) {
-      setIsLogin(() => false);
-    } else {
-      setIsLogin(() => true);
-    }
-  }, [loginContext]);
   return (
     <header className="header">
       <button
@@ -69,7 +59,7 @@ function Header() {
       </ul>
       <div className="header-right-box">
         <Search />
-        {!isLogin ? (
+        {isLogin ? (
           <button ref={ref} className="header-user" type="button" onClick={onClick}>
             <img className="header__user-img" src={noImg} alt="user img" />
             <span className="header__user-name">에코노베이션</span>님

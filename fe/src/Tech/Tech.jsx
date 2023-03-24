@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Pagination from 'react-js-pagination';
 
-import { useLoginStateContext } from '../Context/LoginContext';
 import './css/Tech.css';
 import '../components/css/Pagination.css';
 import write from './img/write.png';
@@ -60,7 +59,6 @@ const data = [
 
 const Tech = function () {
   // const { category } = useParams();
-  const loginContext = useLoginStateContext();
   // const [currentPosts, setCurrentPosts] = useState(data);
   const [currentPage, setCurrentPage] = useState(0);
   const navigate = useNavigate();
@@ -81,7 +79,7 @@ const Tech = function () {
             <button
               type="button"
               className={
-                loginContext.id === 1
+                true
                   ? 'tech-write_button tech-write_button--hidden'
                   : 'tech-write_button'
               }
