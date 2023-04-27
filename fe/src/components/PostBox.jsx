@@ -15,12 +15,10 @@ const PostBox = function ({ post }) {
         <div className="post-box__img" />
         <div className="post-box-info">
           <div className="post-box-info-top">
-            <span className="post-box-info__title">{post.title}</span>
+            <div className="post-box-info__title">{post.title}</div>
             <Tags tags={post.categoryList} />
           </div>
-          <div className="post-box-info-middle">
-            <span className="post-box-info__content">{post.content}</span>
-          </div>
+          <div className="post-box-info__content">{post.content}</div>
           <div className="post-box-info-bottom">
             <div className="post-box-info-details">
               <PostDetails
