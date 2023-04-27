@@ -1,0 +1,75 @@
+.official-post {
+    display: flex;
+    border-radius: 1vw;
+    overflow: hidden;
+    box-shadow: 0 0 0.4vw 0 rgba(0, 0, 0, 0.16);
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+}
+
+.official-post__img {
+    width: 24vw;
+    height: 17vw;
+    background-color: #4e4e4e;
+}
+
+.official-post-info {
+    flex: 7;
+    padding: 1.8vw 2.5vw;
+}
+
+.official-post-info-top {
+    display: flex;
+    flex-direction: column;
+}
+
+.official-post-title {
+    font-weight: 700;
+    font-size: 1.2vw;
+    color: #2269fb;
+    margin-bottom: 0.5vw; 
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.official-post-info__content{
+    margin: 1.2vw 0;
+    height: 4vw;
+    font-weight: 400;
+    font-size: 0.9vw;
+    color: rgba(0,0,0,0.7);
+    line-height: 1.6;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.official-post-info-bottom {
+    display: flex;
+    align-items: center;
+    font-size: 1vw;
+}
+
+.official-post-info-bottom-left {
+    display: flex;
+    align-items: center;
+    margin-right: 1vw;
+}
+
+.official-post-info-bottom-left__img{
+    width: 2vw;
+    height: 2vw;
+    border-radius: 70%;
+    margin-right: 0.6vw;
+}
+
+.official-post-info-bottom-left__span {
+    color: #7f7f7f;
+    font-weight: 400;
+    font-size: 0.9vw;
+}
