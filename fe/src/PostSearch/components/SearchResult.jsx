@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 // import { useParams } from 'react-router-dom';
 import Pagination from 'react-js-pagination';
-import { gql, useQuery } from '@apollo/client';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
 
@@ -10,26 +9,6 @@ import '../css/SearchResult.css';
 import '../../components/css/Pagination.css';
 import SearchNavItem from './SearchNavItem';
 import PostBox from '../../components/PostBox';
-
-const GET_SEARCH = gql`
-  query getSearch($keyword: String!, $mainCategoryNumber: Int!, $page: Int!) {
-    search(
-      keyword: $keyword
-      mainCategoryNumber: $mainCategoryNumber
-      page: $page
-    ) {
-      postId
-      userName
-      content
-      title
-      mainCategoryNumber
-      categoryName
-      createdDate
-      views
-      hearts
-    }
-  }
-`;
 
 const SearchResult = function ({ keyword }) {
   // const { currentKeyword } = useParams();
@@ -58,14 +37,7 @@ const SearchResult = function ({ keyword }) {
   const [currCategory, setCurrCategory] = useState(0);
   const [currentPosts, setCurrentPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
-  const { data } = useQuery(GET_SEARCH, {
-    variables: {
-      keyword: keyword,
-      mainCategoryNumber: currCategory,
-      page: currentPage,
-    },
-  });
-  console.log('search', data);
+
   useEffect(() => {
     if (data) {
       setCurrentPosts(data.search);
@@ -84,6 +56,7 @@ const SearchResult = function ({ keyword }) {
       }),
     );
     setCurrCategory(id);
+    console.log(currCategory);
   };
   const postNum = [5, 3, 0, 2]; // 검색 결과
   return (
