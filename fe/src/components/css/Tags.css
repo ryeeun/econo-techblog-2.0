@@ -1,6 +1,5 @@
 .tags {
     width: 98%;
-    margin: 0 auto;
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 300;
@@ -14,5 +13,5 @@
     background-color: #96b3ed;
     padding: 0.2vw 0.6vw;
     margin-right: 0.6vw;
-    margin-bottom: 0.5vw;
+    margin-top: 0.5vw;
 }

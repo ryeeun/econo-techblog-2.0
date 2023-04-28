@@ -12,7 +12,6 @@ import Post from './Post/Post';
 import UserList from './Manager/components/UserList';
 import UserInfo from './Manager/components/UserInfo';
 import PostSearch from './PostSearch/PostSearch';
-import RegistList from './Manager/components/RegistList';
 
 function App() {
   return (
@@ -26,7 +25,6 @@ function App() {
         </Route>
         <Route path="/post/:id" element={<Post />} />
         <Route path="/admin" element={<Manager />}>
-          <Route path="/admin/regist" element={<RegistList />} />
           <Route path="/admin/role" element={<UserList />}>
             <Route path=":role" element={<UserList />} />
           </Route>

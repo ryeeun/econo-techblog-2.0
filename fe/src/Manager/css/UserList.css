@@ -1,6 +1,8 @@
 .userlist {
     width: 90%;
-    margin: 30px auto;
+    margin: 1.8vw auto;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
 }
 
 .userlist-top {
@@ -10,7 +12,8 @@
 }
 
 .userlist__title{
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 1.2vw;
 }
 
 .userlist-edit {
@@ -19,25 +22,25 @@
 }
 
 .userlist-edit__button {
-    height: 30px;
-    width: 80px;
+    height: 1.8vw;
+    width: 5vw;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.3vw;
     background-color: #2269fa;
-    margin-left: 10px;
-    font-size: 12px;
+    margin-left: 0.6vw;
+    font-size: 0.7vw;
     font-weight: 500;
     color: #fff;
 }
 
 .userlist-text {
-    font-size: 14px;
-    font-weight: normal;
+    font-size: 0.8vw;
+    font-weight: 500;
     color: #8f8f8f;
 }
 
 .userlist-text--blue {
-    font-weight: bold;
+    font-weight: 700;
     color: #2269fa;
 }
 
@@ -51,8 +54,8 @@
 }
 
 .userlist-setting-btn__img {
-    margin-top: 6px;
-    width: 14px;
+    margin-top: 0.3vw;
+    width: 0.8vw;
 }
 
 .userlist-setting-box {

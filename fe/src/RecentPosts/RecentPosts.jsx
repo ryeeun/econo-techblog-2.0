@@ -1,72 +1,53 @@
 import React, { useEffect, useState } from 'react';
 import './RecentPosts.css';
-import { gql, useQuery } from '@apollo/client';
 
 import RecentPost from './components/RecentPost';
 import bg from './img/main_recents_bg.png';
 
-const GET_POSTS = gql`
-  query findAllPosts($mainCategoryNumber: Int!, $page: Int!) {
-    findAllPosts(mainCategoryNumber: $mainCategoryNumber, page: $page) {
-      postId
-      userName
-      content
-      title
-      mainCategoryNumber
-      categoryName
-      createdDate
-      views
-      hearts
-    }
-  }
-`;
-
-const posts = {
-  data: [
-    {
-      title: '[ECONO PEOPLE #20] 일상은 즐겁게 인생은 진지',
-      content: '안녕하세요 에코노베이션 김정인입니다. ECONO PEOPLE은 에코노베이션 구성원의 이야기를 담은 인터뷰입니다.  ECONO PEOPLE은 에코노베이션',
-      categoryName: 'html,css,javascript,react',
-      userName: '에코노베이션',
-      createdDate: '2023/01/01 00:00:00',
-    },
-    {
-      title: '[ECONO PEOPLE #20] 일상은 즐겁게 인생은 진지',
-      content: '안녕하세요 에코노베이션 김정인입니다. ECONO PEOPLE은 에코노베이션 구성원의 이야기를 담은 인터뷰입니다.',
-      categoryName: 'html,css',
-      userName: '에코노베이션',
-      createdDate: '2023/01/01 00:00:00',
-    },
-    {
-      title: '[ECONO PEOPLE #20] 일상은 즐겁게 인생은 진지',
-      content: '안녕하세요 에코노베이션 김정인입니다. ECONO PEOPLE은 에코노베이션 구성원의 이야기를 담은 인터뷰입니다.',
-      categoryName: 'html,css',
-      userName: '에코노베이션',
-      createdDate: '2023/01/01 00:00:00',
-    },
-    {
-      title: '[ECONO PEOPLE #20] 일상은 즐겁게 인생은 진지',
-      content: '안녕하세요 에코노베이션 김정인입니다. ECONO PEOPLE은 에코노베이션 구성원의 이야기를 담은 인터뷰입니다.',
-      categoryName: 'html,css',
-      userName: '에코노베이션',
-      createdDate: '2023/01/01 00:00:00',
-    },
-    {
-      title: '[ECONO PEOPLE #20] 일상은 즐겁게 인생은 진지',
-      content: '안녕하세요 에코노베이션 김정인입니다. ECONO PEOPLE은 에코노베이션 구성원의 이야기를 담은 인터뷰입니다.',
-      categoryName: 'html,css',
-      userName: '에코노베이션',
-      createdDate: '2023/01/01 00:00:00',
-    },
-    {
-      title: '[ECONO PEOPLE #20] 일상은 즐겁게 인생은 진지',
-      content: '안녕하세요 에코노베이션 김정인입니다. ECONO PEOPLE은 에코노베이션 구성원의 이야기를 담은 인터뷰입니다.',
-      categoryName: 'html,css',
-      userName: '에코노베이션',
-      createdDate: '2023/01/01 00:00:00',
-    },
-  ],
-};
+const data = [
+  {
+    title: '[ECONO PEOPLE #20] 일상은 즐겁게 인생은 진지',
+    content: '안녕하세요 에코노베이션 김정인입니다. ECONO PEOPLE은 에코노베이션 구성원의 이야기를 담은 인터뷰입니다.  ECONO PEOPLE은 에코노베이션',
+    categoryName: 'html,css,javascript,react',
+    userName: '에코노베이션',
+    createdDate: '2023/01/01 00:00:00',
+  },
+  {
+    title: '[ECONO PEOPLE #20] 일상은 즐겁게 인생은 진지',
+    content: '안녕하세요 에코노베이션 김정인입니다. ECONO PEOPLE은 에코노베이션 구성원의 이야기를 담은 인터뷰입니다.',
+    categoryName: 'html,css',
+    userName: '에코노베이션',
+    createdDate: '2023/01/01 00:00:00',
+  },
+  {
+    title: '[ECONO PEOPLE #20] 일상은 즐겁게 인생은 진지',
+    content: '안녕하세요 에코노베이션 김정인입니다. ECONO PEOPLE은 에코노베이션 구성원의 이야기를 담은 인터뷰입니다.',
+    categoryName: 'html,css',
+    userName: '에코노베이션',
+    createdDate: '2023/01/01 00:00:00',
+  },
+  {
+    title: '[ECONO PEOPLE #20] 일상은 즐겁게 인생은 진지',
+    content: '안녕하세요 에코노베이션 김정인입니다. ECONO PEOPLE은 에코노베이션 구성원의 이야기를 담은 인터뷰입니다.',
+    categoryName: 'html,css',
+    userName: '에코노베이션',
+    createdDate: '2023/01/01 00:00:00',
+  },
+  {
+    title: '[ECONO PEOPLE #20] 일상은 즐겁게 인생은 진지',
+    content: '안녕하세요 에코노베이션 김정인입니다. ECONO PEOPLE은 에코노베이션 구성원의 이야기를 담은 인터뷰입니다.',
+    categoryName: 'html,css',
+    userName: '에코노베이션',
+    createdDate: '2023/01/01 00:00:00',
+  },
+  {
+    title: '[ECONO PEOPLE #20] 일상은 즐겁게 인생은 진지',
+    content: '안녕하세요 에코노베이션 김정인입니다. ECONO PEOPLE은 에코노베이션 구성원의 이야기를 담은 인터뷰입니다.',
+    categoryName: 'html,css',
+    userName: '에코노베이션',
+    createdDate: '2023/01/01 00:00:00',
+  },
+];
 
 const RecentPosts = function () {
   const [currentPosts, setCurrentPosts] = useState([]);
@@ -88,16 +69,11 @@ const RecentPosts = function () {
       active: false,
     },
   ]);
-  const { data } = useQuery(GET_POSTS, {
-    variables: {
-      mainCategoryNumber: currCategory,
-      page: 0,
-    },
-  });
+
   console.log('recentposts', currentPosts);
   useEffect(() => {
     if (data) {
-      const slicePosts = data.findAllPosts;
+      const slicePosts = data;
       if (slicePosts.length > 6) {
         setCurrentPosts(slicePosts.slice(0, 7));
       } else {
@@ -143,7 +119,7 @@ const RecentPosts = function () {
         ))}
       </div>
       <div className="recent-posts-box">
-        {posts.data.map((item) => (
+        {data.map((item) => (
           <RecentPost key={item.id} post={item} />
         ))}
       </div>

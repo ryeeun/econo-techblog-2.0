@@ -1,20 +1,17 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 
 import '../css/Official.css';
-import noImg from '../img/no_img.png';
-import PostDetails from '../../components/PostDetails';
-import Tags from '../../components/Tags';
+import OfficialPost from './OfficialPost';
 
 const data = [
   {
     postId: '1',
     userName: '에코노베이션',
-    content: 'dddd',
-    title: '1에코노베이션 멋알',
+    content: 'React를 조금만이라도 공부해본 사람이 위 코드를 보게 되면 틀림없이 잘못된 코드라고 말할겁니다. 그 사람에게 저 코드가 왜 잘못됐냐고 물어보면 뭐라고 대답할까요? 장담은 못하겠지만 아마 많은 사람들이 "React에서 그렇게 쓰지 말래" 라고 말할것 같습니다.같은 사람에게 "왜 React에서 저렇게 쓰지 말래?" 라고 물어보면 이번에도 장담은 못하겠지만 아마도 "오... 그거까지는 모르겠는데...?" 라고 대답할것 같습니다. 저도 최근에 같은 질문을 받은 후 마찬가지의 대답을 했고 그것이 이번 포스팅을 하게 된 이유입니다. 혹시라도 이 글을 보고 계신 여러분께 다시 한번 물어보겠습니다. "왜 React에서 저렇게 쓰지 말래요?" 이 질문에 대한 대답을 할 수 있는 분은 이글을 보지 않으셔도 좋습니다.',
+    title: 'React hook은 왜 컴포넌트 최상단에서만 동작할까?',
     mainCategoryNumber: '3',
-    categoryList: 'HTML, CSS, React',
+    categoryList: 'HTML, CSS, React, CSS, React',
     createdDate: '2023/01/01 00:00:00',
     views: '21',
     hearts: '21',
@@ -27,7 +24,7 @@ const data = [
     mainCategoryNumber: '3',
     categoryList: 'HTML, CSS, React',
     createdDate: '2023/01/01 00:00:00',
-    views: '21',
+    views: '22',
     hearts: '21',
   },
   {
@@ -38,7 +35,7 @@ const data = [
     mainCategoryNumber: '3',
     categoryList: 'HTML, CSS, React',
     createdDate: '2023/01/01 00:00:00',
-    views: '21',
+    views: '23',
     hearts: '21',
   },
 ];
@@ -70,40 +67,7 @@ const Official = function () {
   if (officialPosts === undefined) return null;
   return (
     <div className="official">
-      <Link
-        to={`/post/${officialPosts[currentIndex].postId}`}
-        style={{ textDecoration: 'none' }}
-      >
-        <div className="official-post">
-          <div className="official__img" />
-          <div className="official-info">
-            <div className="official-info-top">
-              <span className="official-title">{officialPosts[currentIndex].title}</span>
-              <Tags tags={officialPosts[currentIndex].categoryList} />
-            </div>
-            <div className="official-info-middle">
-              <span className="official-info__content">에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션에코노베이션</span>
-            </div>
-            <div className="official-info-bottom">
-              <div className="official-info-bottom-left">
-                <img
-                  src={noImg}
-                  alt="no-img"
-                  className="official-info-bottom-left__img"
-                />
-                <span className="official-info-bottom-left__span">
-                  {officialPosts[currentIndex].userName}
-                </span>
-              </div>
-              <PostDetails
-                date="2023/01/01 00:00:00"
-                views={officialPosts[currentIndex].views}
-                hearts={officialPosts[currentIndex].hearts}
-              />
-            </div>
-          </div>
-        </div>
-      </Link>
+      <OfficialPost post={officialPosts[currentIndex]} />
       <div className="official-bottom">
         {officialPosts.map((post, index) => (
           <button

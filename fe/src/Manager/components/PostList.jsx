@@ -3,37 +3,41 @@ import React, { useState } from 'react';
 import Pagination from 'react-js-pagination';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
-import { gql, useQuery } from '@apollo/client';
 
 import '../css/PostList.css';
 
-const POST_BY_USER = gql`
-  query postByUser($userId: Int!) {
-    postByUser(userId: $userId) {
-      postId
-      userName
-      content
-      title
-      mainCategoryNumber
-      categoryName
-      createdDate
-      views
-      hearts
-    }
-  }
-`;
+const postByUser = [
+  {
+    postId: 1,
+    userName: '이윤성',
+    title: '가나다라 에코노베이션',
+    mainCategoryNumber: 2,
+    createdDate: '2022.07.08',
+    views: 21,
+  },
+  {
+    postId: 2,
+    userName: '이윤성',
+    title: '가나다라 에코노베이션',
+    mainCategoryNumber: 2,
+    createdDate: '2022.07.08',
+    views: 21,
+  },
+  {
+    postId: 3,
+    userName: '이윤성',
+    title: '가나다라 에코노베이션',
+    mainCategoryNumber: 2,
+    createdDate: '2022.07.08',
+    views: 21,
+  },
+];
 
 const PostList = function ({ uid, onChange }) {
   const columns = ['게시판', '제목', '작성일', '조회', '설정'];
   const category = ['Tech', 'Culture', 'Trouble shooting'];
   const [currentPage, setCurrentPage] = useState(1);
-  const { data, loading } = useQuery(POST_BY_USER, {
-    variables: {
-      userId: uid,
-    },
-  });
-
-  if (loading) return null;
+  console.log(uid);
   return (
     <div className="postlist">
       <table className="postlist-table">
@@ -52,7 +56,7 @@ const PostList = function ({ uid, onChange }) {
           </tr>
         </thead>
         <tbody>
-          {data.postByUser.map(
+          {postByUser.map(
             ({ postId, mainCategoryNumber, title, createdDate, views }) => (
               <tr key={postId} className="postlist-table__tr">
                 <td>{category[mainCategoryNumber - 1]}</td>
@@ -73,11 +77,11 @@ const PostList = function ({ uid, onChange }) {
           )}
         </tbody>
       </table>
-      {data.postByUser.length < 7 ? null : (
+      {postByUser.length < 7 ? null : (
         <Pagination
           activePage={currentPage}
           itemsCountPerPage={6}
-          totalItemsCount={data.postByUser.length}
+          totalItemsCount={postByUser.length}
           pageRangeDisplayed={5}
           prevPageText="<"
           nextPageText=">"

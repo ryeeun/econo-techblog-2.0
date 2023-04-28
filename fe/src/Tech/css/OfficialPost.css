@@ -1,35 +1,33 @@
-.post-box {
+.official-post {
     display: flex;
-    border-top: solid 0.1vw #eee;
-    border-bottom: solid 0.1vw #eee;
-    align-items: center;
+    border-radius: 1vw;
+    overflow: hidden;
+    box-shadow: 0 0 0.4vw 0 rgba(0, 0, 0, 0.16);
     font-family: 'Noto Sans KR';
     font-style: normal;
 }
 
-.post-box__img {
-    width: 12vw;
-    height: 12vw;
-    border-radius: 1vw;
+.official-post__img {
+    width: 24vw;
+    height: 17vw;
     background-color: #4e4e4e;
 }
 
-.post-box-info {
+.official-post-info {
     flex: 7;
     padding: 1.8vw 2.5vw;
 }
 
-.post-box-info-top {
+.official-post-info-top {
     display: flex;
     flex-direction: column;
 }
 
-.post-box-info__title {
+.official-post-title {
     font-weight: 700;
-    font-size: 1.1vw;
-    margin-right: 1.2vw;
-    margin-bottom: 0.5vw;
-    color: #000;
+    font-size: 1.2vw;
+    color: #2269fb;
+    margin-bottom: 0.5vw; 
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -37,11 +35,8 @@
     -webkit-box-orient: vertical;
 }
 
-.post-box-info__content {
-    margin: 1vw 0;
-    display: flex;
-    align-items: flex-start;
-    width: 80%;
+.official-post-info__content{
+    margin: 1.2vw 0;
     height: 4vw;
     font-weight: 400;
     font-size: 0.9vw;
@@ -54,27 +49,27 @@
     -webkit-box-orient: vertical;
 }
 
-.post-box-info-bottom {
+.official-post-info-bottom {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    font-size: 1vw;
 }
 
-.post-box-info-details{
-    display: flex;
-}
-
-.post-box-info-author {
+.official-post-info-bottom-left {
     display: flex;
     align-items: center;
-    font-weight: 400;
-    font-size: 0.9vw;
-    color: #7f7f7f;
+    margin-right: 1vw;
 }
 
-.post-box-info-author__img{
+.official-post-info-bottom-left__img{
     width: 2vw;
     height: 2vw;
     border-radius: 70%;
-    margin-left: 0.6vw;
+    margin-right: 0.6vw;
+}
+
+.official-post-info-bottom-left__span {
+    color: #7f7f7f;
+    font-weight: 400;
+    font-size: 0.9vw;
 }

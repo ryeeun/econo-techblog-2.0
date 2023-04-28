@@ -16,8 +16,22 @@ function Write() {
   const [categoryNum, setCategoryNum] = useState(0);
   const [title, setTitle] = useState('');
   const [hashtagList, setHashtagList] = useState([]);
+  const [errorMsg, setErrorMsg] = useState('');
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (categoryNum === 0) {
+      setErrorMsg('게시판을 선택해주세요.');
+      return;
+    }
+    if (title === '') {
+      setErrorMsg('제목을 입력해주세요.');
+      return;
+    }
+    if (hashtagList.length === 0) {
+      setErrorMsg('태그를 한 개 이상 입력해주세요.');
+      return;
+    }
 
-  const onSubmit = () => {
     // 카테고리, 제목, 본문 확인 로직 추가
     const contentHTML = editorRef.current?.getInstance().getHTML();
     const contentMarkdown = editorRef.current?.getInstance().getMarkdown();
@@ -93,6 +107,7 @@ function Write() {
         </div>
       </div>
       <div className="write-button__container">
+        <span className="write-error-msg">{errorMsg}</span>
         <button
           className="write-cancel__button"
           type="button"
