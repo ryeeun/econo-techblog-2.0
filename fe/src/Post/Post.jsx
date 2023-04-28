@@ -20,7 +20,13 @@ const data = {
   hearts: '21',
 };
 
-const Post = function () {
+const Post = function (id) {
+  const onDelete = () => {
+    console.log(id)
+  }
+  const onClick = (active) => {
+    console.log(active);
+  }
   return (
     <div className="post">
       <div className="post-middle">
@@ -30,7 +36,7 @@ const Post = function () {
           date={data.createdDate}
           views={data.views}
           hearts={data.hearts}
-          onDelete={onDelete}
+          onDelete={onDelete(data.postId)}
         />
         <Tags tags={data.categoryList} />
         <PostDesc />
