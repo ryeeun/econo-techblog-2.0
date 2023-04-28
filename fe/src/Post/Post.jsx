@@ -22,11 +22,11 @@ const data = {
 
 const Post = function (id) {
   const onDelete = () => {
-    console.log(id)
-  }
+    console.log(id);
+  };
   const onClick = (active) => {
     console.log(active);
-  }
+  };
   return (
     <div className="post">
       <div className="post-middle">

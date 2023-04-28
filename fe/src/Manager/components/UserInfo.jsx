@@ -1,14 +1,12 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable object-shorthand */
 /* eslint-disable no-shadow */
-import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import noImg from '../img/no_img.png';
 import '../css/UserInfo.css';
 import PostList from './PostList';
-
 
 const testUser = {
   uid: 1,
