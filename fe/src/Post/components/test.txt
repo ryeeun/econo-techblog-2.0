@@ -1,0 +1,36 @@
+### Editor
+
+먼저 Editor를 보자.
+
+![https://velog.velcdn.com/images%2Fayoung0073%2Fpost%2F1ee83871-2fa5-4d63-b366-11cc64f56e00%2Fimage.png](https://velog.velcdn.com/images%2Fayoung0073%2Fpost%2F1ee83871-2fa5-4d63-b366-11cc64f56e00%2Fimage.png)
+
+Editor를 적용하는 건 매우 간단하다. (여기서 import문을 주시하자)
+
+```
+import '@toast-ui/editor/dist/toastui-editor.css';
+import { Editor } from '@toast-ui/react-editor';
+
+  <Editor
+    initialValue="hello react editor world!"
+    previewStyle="vertical"
+    height="600px"
+    initialEditType="markdown"
+    useCommandShortcut={true}
+  />
+```
+
+위의 코드 하나면 된다. ([자세한 설명 링크](https://www.npmjs.com/package/@toast-ui/react-editor))
+
+리액트 프레임워크 없이 적용한다면
+
+```
+const editor = new toastui.Editor({
+	el: document.querySelector('#editor'),
+	previewStyle: 'vertical',
+	initialEditType: "markdown",
+	height: '600px',
+	initialValue: content
+});
+```
+
+위의 코드를 쓰면 된다. 거의 비슷하다.
