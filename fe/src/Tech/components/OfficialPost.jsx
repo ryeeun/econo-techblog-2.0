@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 
 import '../css/OfficialPost.css';
 import noImg from '../img/no_img.png';
-import Tags from '../../components/Tags';
 import PostDetails from '../../components/PostDetails';
 
 const OfficialPost = function ({ post }) {
@@ -15,10 +14,7 @@ const OfficialPost = function ({ post }) {
       <div className="official-post">
         <div className="official-post__img" />
         <div className="official-post-info">
-          <div className="official-post-info-top">
-            <div className="official-post-title">{post.title}</div>
-            <Tags tags={post.categoryList} />
-          </div>
+          <div className="official-post-info-title">{post.title}</div>
           <div className="official-post-info__content">{post.content}</div>
           <div className="official-post-info-bottom">
             <div className="official-post-info-bottom-left">

@@ -9,9 +9,9 @@ const Tags = function ({ tags }) {
   return (
     <div className="tags">
       {(tags ? tags.split(',') : []).map((elem, index) => (
-        <div key={index} className="tag">
+        <span key={index} className="tag">
           {`#${elem}`}
-        </div>
+        </span>
       ))}
     </div>
   );

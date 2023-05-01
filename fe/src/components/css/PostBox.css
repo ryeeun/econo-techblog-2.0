@@ -15,20 +15,28 @@
 }
 
 .post-box-info {
+    display: flex;
+    flex-direction: column;
     flex: 7;
-    padding: 1.8vw 2.5vw;
+    padding: 2.8vw 2.5vw;
 }
 
 .post-box-info-top {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    height: 1.8vw;
+}
+
+.post-box-info-tag {
+    margin-top: 0.1vw;
+    font-size: 0.7vw;
 }
 
 .post-box-info__title {
     font-weight: 700;
     font-size: 1.1vw;
     margin-right: 1.2vw;
-    margin-bottom: 0.5vw;
+    max-width: 50%;
     color: #000;
     display: -webkit-box;
     overflow: hidden;

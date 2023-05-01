@@ -8,26 +8,22 @@
 }
 
 .official-post__img {
-    width: 24vw;
-    height: 17vw;
+    width: 22vw;
+    height: 15vw;
     background-color: #4e4e4e;
 }
 
 .official-post-info {
-    flex: 7;
-    padding: 1.8vw 2.5vw;
-}
-
-.official-post-info-top {
     display: flex;
     flex-direction: column;
+    flex: 7;
+    padding: 2vw 2.5vw;
 }
 
-.official-post-title {
+.official-post-info-title {
     font-weight: 700;
     font-size: 1.2vw;
     color: #2269fb;
-    margin-bottom: 0.5vw; 
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -36,7 +32,7 @@
 }
 
 .official-post-info__content{
-    margin: 1.2vw 0;
+    margin: 1.2vw 0 2vw 0;
     height: 4vw;
     font-weight: 400;
     font-size: 0.9vw;

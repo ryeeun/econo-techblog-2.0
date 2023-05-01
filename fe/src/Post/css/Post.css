@@ -12,6 +12,10 @@
     margin-right: auto;
 }
 
+.post-tag {
+    font-size: 0.8vw;
+}
+
 .post-partition {
     width: 90%;
     margin-left: auto;

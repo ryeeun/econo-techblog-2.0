@@ -38,7 +38,9 @@ const Post = function (id) {
           hearts={data.hearts}
           onDelete={onDelete(data.postId)}
         />
-        <Tags tags={data.categoryList} />
+        <div className="post-tag">
+          <Tags tags={data.categoryList} />
+        </div>
         <PostDesc />
         <Liked active={data.isHeart} setActive={() => onClick(data.isHeart)} />
       </div>
