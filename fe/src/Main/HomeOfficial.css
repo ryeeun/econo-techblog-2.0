@@ -50,6 +50,12 @@
     font-family: 'Noto Sans KR';
     font-style: normal;
     line-height: 1.8;
+    transition: 0.4s;
+}
+
+.home-official-item:hover .home-official-background {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.548);
 }
 
 .item-big span {
@@ -84,7 +90,3 @@
     object-fit: cover;
 }
 
-.home-official-item:hover .home-official-background {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.548);
-}
