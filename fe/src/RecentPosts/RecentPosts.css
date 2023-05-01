@@ -69,4 +69,5 @@
     bottom: 0;
     background-color: black;
     border-radius: 1vw;
+    transition: .6s;
 }
