@@ -16,8 +16,9 @@
 .official-post-info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     flex: 7;
-    padding: 2vw 2.5vw;
+    padding: 0 2.5vw;
 }
 
 .official-post-info-title {
@@ -32,8 +33,8 @@
 }
 
 .official-post-info__content{
-    margin: 1.2vw 0 2vw 0;
-    height: 4vw;
+    margin: 1vw 0 1vw 0;
+    height: 5.5vw;
     font-weight: 400;
     font-size: 0.9vw;
     color: rgba(0,0,0,0.7);
@@ -41,7 +42,7 @@
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
 }
 
