@@ -4,11 +4,16 @@
     height: fit-content;
     border-radius: 1vw;
     box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.16);
+    transition: all 0.25s linear;
     overflow: hidden;
     background-color: #fff;
     margin: 1.5vw;
     font-family: 'Noto Sans KR';
     font-style: normal;
+}
+
+.recent-post:hover {
+    transform: translateY( -10px )
 }
 
 .recent-post__img{
