@@ -1,0 +1,13 @@
+.official-slide {
+    border-radius: 1vw;
+    overflow-X: hidden;
+}
+
+.official-slide-box {
+    width: 300%;
+    display: flex;
+}
+
+.official-slide-item {
+    flex: 1;
+}
