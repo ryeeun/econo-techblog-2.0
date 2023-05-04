@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import '../css/Official.css';
 import OfficialSlide from './OfficialSlide';
@@ -42,57 +42,18 @@ const data = [
 ];
 
 const Official = function () {
-  const slideRef = useRef();
   const [officialPosts, setOfficialPosts] = useState(data);
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     setOfficialPosts(data);
   }, []);
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setCurrentIndex((currentValue) => {
-        if (currentValue < officialPosts.length - 1) {
-          return currentValue + 1;
-        }
-        return 0;
-      });
-    }, 3500);
-    return () => clearTimeout(timeoutId);
-  }, [currentIndex]);
-
-  // const handleSlider = (index) => {
-  //   if (index === 5) {
-  //     slideRef.current.style.transform = 'translateX(0)';
-  //   } else {
-  //     slideRef.current.style.transform = `translateX(-${
-  //       window.innerWidth * count
-  //     }px)`;
-  //   }
-  // };
 
   if (officialPosts === undefined) return null;
   return (
     <div className="official">
       <OfficialSlide
         officialPosts={officialPosts}
-        slideRef={slideRef}
-        currentIndex={currentIndex}
       />
-      <div className="official-pagination">
-        {officialPosts.map((post, index) => (
-          <button
-            key={post.postId}
-            type="button"
-            className={
-              currentIndex === index
-                ? 'official-pagination__button official-pagination__button--current'
-                : 'official-pagination__button'
-            }
-          />
-        ))}
-      </div>
     </div>
   );
 };
