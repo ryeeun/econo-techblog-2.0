@@ -1,14 +1,16 @@
 .hashtag-input-container{
     margin: 0.4vw 0;
-    min-height: 3vw;
+    min-height: 2.5vw;
     width: 99%;
     border: 0.1vw solid #d3d3d3;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .hashtag-element{
     margin-left: 0.3vw;
+    height: 2vw;
     color: #4e87fb;
     background-color: white;
     border: none;
@@ -22,6 +24,7 @@
 
 .hashtag-input{
     border:none;
+    height: 2vw;
     font-family: 'Noto Sans KR';
     font-weight: 400;
     font-style: normal;
