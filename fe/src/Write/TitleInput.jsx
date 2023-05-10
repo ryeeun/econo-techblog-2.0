@@ -9,8 +9,8 @@ function TitleInput({ setTitle }) {
   const titleBox = useRef();
   const onTitleChange = (e) => {
     setTitle(e.target.value);
-    titleBox.current.style.height = '2.5vw';
-    titleBox.current.style.height = `${titleInput.current.scrollHeight + 1}px`;
+    titleInput.current.style.height = '0.9vw';
+    titleInput.current.style.height = `${titleInput.current.scrollHeight / 13}vw`;
     console.log(titleInput.current.scrollHeight);
   };
   return (

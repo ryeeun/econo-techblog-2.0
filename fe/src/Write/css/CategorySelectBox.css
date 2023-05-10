@@ -3,6 +3,7 @@
     width: 99%;
     border: 0.1vw solid #d3d3d3;
     display: flex;
+    margin: 0.4vw 0;
     align-items: center;
     position: relative;
     z-index: 50;
