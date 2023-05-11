@@ -14,7 +14,7 @@
 .write__grid{
     display: grid;
     align-items: center;
-    grid-template-rows: 4vw minmax(4vw, auto) minmax(4vw, auto) 35vw;
+    grid-template-rows: 4vw minmax(4vw, auto) minmax(4vw, auto) 48vh;
     grid-template-columns: 20% 80%;
     row-gap: 0.1vw;
 }

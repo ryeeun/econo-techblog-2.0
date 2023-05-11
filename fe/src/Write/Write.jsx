@@ -9,6 +9,7 @@ import HashtagInput from './HashtagInput';
 import TitleInput from './TitleInput';
 import CategorySelectBox from './CategorySelectBox';
 import './css/Write.css';
+import './css/ToastUI.css';
 
 function Write() {
   const editorRef = useRef();
@@ -75,7 +76,10 @@ function Write() {
           <span>*</span>
         </div>
         <div className="write-item__input">
-          <HashtagInput hashtagList={hashtagList} setHashtagList={setHashtagList} />
+          <HashtagInput
+            hashtagList={hashtagList}
+            setHashtagList={setHashtagList}
+          />
         </div>
         <div className="write-item">
           본문
