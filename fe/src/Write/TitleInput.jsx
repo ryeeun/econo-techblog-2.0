@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import './css/TitleInput.css';
 
-function TitleInput({ setTitle }) {
+function TitleInput({ title, setTitle }) {
   const onTitleChange = (e) => {
     setTitle(e.target.value);
   };
@@ -14,12 +14,14 @@ function TitleInput({ setTitle }) {
         className="title-input"
         placeholder="제목을 입력하세요..."
         onChange={onTitleChange}
+        value={title}
       />
     </div>
   );
 }
 
 TitleInput.propTypes = {
+  title: PropTypes.string.isRequired,
   setTitle: PropTypes.func.isRequired,
 };
 

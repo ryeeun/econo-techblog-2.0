@@ -18,7 +18,9 @@ function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Main />} />
-        <Route path="/write" element={<Write />} />
+        <Route path="/write" element={<Write />}>
+          <Route path=":id" element={<Write />} />
+        </Route>
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/posts" element={<Tech />}>
           <Route path=":category" element={<Tech />} />

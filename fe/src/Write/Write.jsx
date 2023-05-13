@@ -1,6 +1,6 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Editor } from '@toast-ui/react-editor';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '@toast-ui/editor/dist/toastui-editor.css';
@@ -11,13 +11,35 @@ import CategorySelectBox from './CategorySelectBox';
 import './css/Write.css';
 import './css/ToastUI.css';
 
+const data = {
+  postId: '1',
+  userName: '에코노베이션',
+  content: 'dddd',
+  title: '에코노베이션 멋알 팀에서 에코노베이션 테크블로그를 제작하였습니다.',
+  mainCategoryNumber: '3',
+  categoryList: 'HTML, CSS, React, Tecono, Econovation, 멋알, Toast UI, Tecono, Econovation, 멋알, Toast UI, Tecono, Econovation, 멋알, Toast UI',
+  createdDate: '2023/01/01 00:00:00',
+  views: '21',
+  hearts: '21',
+};
+
 function Write() {
+  const { id } = useParams();
   const editorRef = useRef();
   const navigate = useNavigate();
   const [categoryNum, setCategoryNum] = useState(0);
   const [title, setTitle] = useState('');
   const [hashtagList, setHashtagList] = useState([]);
   const [errorMsg, setErrorMsg] = useState('');
+
+  useEffect(() => {
+    if (id != null) {
+      setCategoryNum(data.mainCategoryNumber);
+      setTitle(data.title);
+      setHashtagList(data.categoryList.split(', '));
+    }
+  }, []);
+
   const onSubmit = (e) => {
     e.preventDefault();
     if (categoryNum === 0) {
@@ -39,6 +61,8 @@ function Write() {
     console.log(categoryNum, title);
     console.log('contentHTML', contentHTML);
     console.log('contentMarkdown', contentMarkdown);
+
+    // 새글 작성 or 수정인지 구분 후 요청
   };
 
   const onCancelClick = () => {
@@ -69,7 +93,7 @@ function Write() {
           <span>*</span>
         </div>
         <div className="write-item__input">
-          <TitleInput setTitle={setTitle} />
+          <TitleInput title={title} setTitle={setTitle} />
         </div>
         <div className="write-item">
           태그
@@ -88,7 +112,7 @@ function Write() {
         <div className="write-editor">
           <Editor
             ref={editorRef}
-            initialValue=" "
+            initialValue={id != null ? data.content : ''}
             placeholder="여기에 내용을 입력하세요.."
             previewStyle="vertical"
             height="100%"
