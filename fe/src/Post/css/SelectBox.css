@@ -7,6 +7,7 @@
     top: 3.1vw;
     margin-right: 1vw;
     z-index: 10;
+    animation: fadein 0.5s ease 0s ;
 }
 
 .select-box-eidt__button,
@@ -31,4 +32,13 @@
 
 .select-box-delete__button {
     color: #f00;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
