@@ -8,7 +8,6 @@ import '../css/RoleSelectBox.css';
 import select from '../img/select_more.png';
 
 const RoleSelectBox = function ({
-  isRejectable,
   onOpen,
   onSelect,
   isOpen,
@@ -32,19 +31,10 @@ const RoleSelectBox = function ({
         }
       >
         <li className="role-select-box__item" onClick={onSelect}>
-          GUEST
-        </li>
-        <li className="role-select-box__item" onClick={onSelect}>
           USER
         </li>
         <li className="role-select-box__item" onClick={onSelect}>
           ADMIN
-        </li>
-        <li
-          className={isRejectable ? 'role-select-box__item' : 'hidden'}
-          onClick={onSelect}
-        >
-          가입 거절
         </li>
       </ul>
     </div>
@@ -52,7 +42,6 @@ const RoleSelectBox = function ({
 };
 
 RoleSelectBox.propTypes = {
-  isRejectable: PropTypes.bool.isRequired,
   onOpen: PropTypes.func.isRequired,
   onSelect: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,

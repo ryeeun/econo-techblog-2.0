@@ -1,18 +1,18 @@
 .role-select-box {
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 0.4vw;
+    margin-left: 0.4vw;
     position: relative;
 }
 
 .role-select-box__current {
-    width: 120px;
-    height: 30px;
-    border-radius: 5px;
-    border: solid 1px #8f8f8f;
-    font-size: 12px;
+    width: 8vw;
+    height: 2vw;
+    border-radius: 0.4vw;
+    border: solid 0.1vw #8f8f8f;
+    font-size: 0.8vw;
     color: #7a7a7a;
     background-color: inherit;
-    padding: 0px 9px;
+    padding: 0 0.6vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,19 +20,19 @@
 }
 
 .role-select-box__img {
-    width: 10px;
-    height: 7px;
+    width: 0.7vw;
+    height: 0.5vw;
 }
 
 .role-select-box__list {
     display: none;
-    width: 120px;
+    width: 8vw;
     position: absolute;
-    top: 25px;
+    top: 1.5vw;
     background-color: #fff;
-    border-radius: 5px;
-    border: solid 1px #8f8f8f;
-    font-size: 12px;
+    border-radius: 0.4vw;
+    border: solid 0.1vw #8f8f8f;
+    font-size: 0.8vw;
     color: #7a7a7a;
 }
 
@@ -41,10 +41,10 @@
 }
 
 .role-select-box__item {
-    height: 30px;
+    height: 2vw;
     display: flex;
     align-items: center;
-    padding-left: 9px;
+    padding-left: 0.6vw;
     cursor: pointer;
 }
 

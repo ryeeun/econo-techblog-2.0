@@ -11,7 +11,7 @@ import '../css/SidebarItem.css';
 import people from '../img/people.png';
 
 const SidebarItem = function ({ id, name, num, isSelected, onClick }) {
-  const param = ['all', 'USER', 'GUEST', 'ADMIN'];
+  const param = ['all', 'USER', 'ADMIN'];
   return (
     <Link
       to={`/admin/role/${param[id - 1]}`}

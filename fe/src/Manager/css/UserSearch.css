@@ -1,15 +1,18 @@
 .user-search {
     display: flex;
     align-items: center;
-    height: 47px;
     background-color: #fff;
-    border-radius: 15px;
+    border-radius: 0.9vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    height: 3vw;
 }
 
 .user-search__input {
     border: none;
-    font-size: 14px;
-    width: 130px;
+    font-size: 1vw;
+    width: 85%;
+    margin-top: 0.2vw;
 }
 
 .user-search__input:focus {
@@ -17,5 +20,6 @@
 }
 
 .user-search__img {
-    margin: 0px 20px;
+    height: 1vw;
+    margin-right: 0.5vw;
 }

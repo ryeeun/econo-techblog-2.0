@@ -60,8 +60,6 @@ const UserList = function () {
         return '전체 회원 관리';
       case 'USER':
         return '일반 회원 관리';
-      case 'GUEST':
-        return '게스트 회원 관리';
       case 'ADMIN':
         return '관리자 회원 관리';
     }
@@ -71,7 +69,7 @@ const UserList = function () {
   const [page, setCurrentPage] = useState(0);
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [currentOption, setCurrentOption] = useState('GUEST');
+  const [currentOption, setCurrentOption] = useState('');
   const getUsers = (url) => {
     console.log('url:', url);
     axios({
@@ -147,7 +145,6 @@ const UserList = function () {
           <span className="userlist-text userlist-text--blue">선택한 회원</span>
           <span className="userlist-text">을</span>
           <RoleSelectBox
-            isRejectable={false}
             onOpen={onOpen}
             onSelect={onSelect}
             isOpen={open}

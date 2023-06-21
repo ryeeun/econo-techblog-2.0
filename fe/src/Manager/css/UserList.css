@@ -22,12 +22,13 @@
 }
 
 .userlist-edit__button {
-    height: 1.8vw;
-    width: 5vw;
+    height: 2vw;
     border: none;
     border-radius: 0.3vw;
     background-color: #2269fa;
     margin-left: 0.6vw;
+    padding-left: 0.8vw;
+    padding-right: 0.8vw;
     font-size: 0.7vw;
     font-weight: 500;
     color: #fff;

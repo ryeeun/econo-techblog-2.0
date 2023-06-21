@@ -4,7 +4,9 @@
     justify-content: space-between;
     background-color: #fff;
     border-radius: 0.9vw;
-    padding: 0.9vw 1.2vw;
+    height: 3vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
     margin-top: 0.7vw;
     font-family: 'Noto Sans KR';
     font-style: normal;
@@ -23,7 +25,8 @@
 
 .sidebar-item-right__img {
     width: 1vw;
-    margin-right: 0.1vw;
+    margin-right: 0.3vw;
+    margin-top: 0.2vw;
 }
 
 .sidebar-item-right__num {

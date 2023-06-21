@@ -20,12 +20,6 @@ const Sidebar = function () {
     },
     {
       id: 3,
-      name: '게스트 회원 관리',
-      num: 67,
-      isSelected: false,
-    },
-    {
-      id: 4,
       name: '관리자 회원 관리',
       num: 67,
       isSelected: false,
