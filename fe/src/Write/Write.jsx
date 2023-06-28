@@ -11,38 +11,41 @@ import CategorySelectBox from './CategorySelectBox';
 import './css/Write.css';
 import './css/ToastUI.css';
 
-const data = {
-  postId: '1',
-  userName: '에코노베이션',
-  content: 'dddd',
-  title: '에코노베이션 멋알 팀에서 에코노베이션 테크블로그를 제작하였습니다.',
-  mainCategoryNumber: '3',
-  categoryList: 'HTML, CSS, React, Tecono, Econovation, 멋알, Toast UI, Tecono, Econovation, 멋알, Toast UI, Tecono, Econovation, 멋알, Toast UI',
-  createdDate: '2023/01/01 00:00:00',
-  views: '21',
-  hearts: '21',
-};
-
 function Write() {
   const { id } = useParams();
   const editorRef = useRef();
   const navigate = useNavigate();
-  const [categoryNum, setCategoryNum] = useState(0);
+  const [post, setPost] = useState();
+  const [categoryName, setCategoryName] = useState('');
   const [title, setTitle] = useState('');
   const [hashtagList, setHashtagList] = useState([]);
   const [errorMsg, setErrorMsg] = useState('');
 
   useEffect(() => {
     if (id != null) {
-      setCategoryNum(data.mainCategoryNumber);
-      setTitle(data.title);
-      setHashtagList(data.categoryList.split(', '));
+      axios
+        .get(`${process.env.REACT_APP_TECONO_API_URL}/boards/1`)
+        .then((response) => {
+          console.log(response);
+          setPost(response.data.data);
+        })
+        .catch((error) => {
+          console.log('error', error);
+        });
     }
   }, []);
 
+  useEffect(() => {
+    if (post !== undefined) {
+      setCategoryName(post.classificaion);
+      setTitle(post.title);
+      setHashtagList(post.hashtag.split(', '));
+    }
+  }, [post]);
+
   const onSubmit = (e) => {
     e.preventDefault();
-    if (categoryNum === 0) {
+    if (categoryName === '') {
       setErrorMsg('게시판을 선택해주세요.');
       return;
     }
@@ -55,14 +58,36 @@ function Write() {
       return;
     }
 
-    // 카테고리, 제목, 본문 확인 로직 추가
-    const contentHTML = editorRef.current?.getInstance().getHTML();
     const contentMarkdown = editorRef.current?.getInstance().getMarkdown();
-    console.log(categoryNum, title);
-    console.log('contentHTML', contentHTML);
+    console.log(categoryName, title);
     console.log('contentMarkdown', contentMarkdown);
 
     // 새글 작성 or 수정인지 구분 후 요청
+    if (id != null) {
+      axios
+        .put(
+          `${process.env.REACT_APP_TECONO_API_URL}/boards/1`,
+          {
+            post_id: 1,
+            title,
+            classification: categoryName,
+            content: contentMarkdown,
+            hashtag: [hashtagList.join('')],
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${process.env.REACT_APP_TEST_ACCESS_TOKEN}`,
+            },
+          },
+        )
+        .then((response) => {
+          console.log('수정 성공', response);
+        })
+        .catch((error) => {
+          console.log('글 수정 오류', error);
+        });
+      navigate('/post/1');
+    }
   };
 
   const onCancelClick = () => {
@@ -84,8 +109,8 @@ function Write() {
         </div>
         <div className="write-item__select">
           <CategorySelectBox
-            categoryNum={categoryNum}
-            setCategoryNum={setCategoryNum}
+            categoryName={categoryName}
+            setCategoryName={setCategoryName}
           />
         </div>
         <div className="write-item">
@@ -112,7 +137,7 @@ function Write() {
         <div className="write-editor">
           <Editor
             ref={editorRef}
-            initialValue={id != null ? data.content : ''}
+            initialValue={post !== undefined ? post.content : ''}
             placeholder="여기에 내용을 입력하세요.."
             previewStyle="vertical"
             height="100%"
