@@ -27,7 +27,7 @@ const SelectBox = function ({ postId, onDelete }) {
 };
 
 SelectBox.propTypes = {
-  postId: PropTypes.string.isRequired,
+  postId: PropTypes.number.isRequired,
   onDelete: PropTypes.func.isRequired,
 };
 

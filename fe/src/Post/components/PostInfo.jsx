@@ -37,13 +37,22 @@ const PostInfo = function ({ post, onDelete }) {
         <div className="post-info-left">
           <div className="post-info-author">
             <img src={noImg} alt="no-img" className="post-info-author__img" />
-            <span>{post.userName}</span>
+            <span>{post.username}</span>
           </div>
-          <PostDetails date={post.createdDate} views={post.views} hearts={post.hearts} />
+          <PostDetails
+            createdAt={post.createdAt}
+            views={post.views}
+            likes={post.likes}
+          />
         </div>
-        <button ref={selectRef} type="button" className="post-info__button" onClick={onClick}>
+        <button
+          ref={selectRef}
+          type="button"
+          className="post-info__button"
+          onClick={onClick}
+        >
           <img src={more} alt="more" className="post-info__img" />
-          {isOpen && <SelectBox postId={post.postId} onDelete={onDelete} />}
+          {isOpen && <SelectBox postId={post.post_id} onDelete={onDelete} />}
         </button>
       </div>
     </div>

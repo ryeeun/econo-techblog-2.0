@@ -8,8 +8,9 @@ import dateImg from './img/day.png';
 import viewsImg from './img/feather_eye.png';
 import heartsImg from './img/heart.png';
 
-const PostDetails = function ({ date, views, hearts }) {
-  const formatDate = date.split(' ')[0].replace(/\//gi, '.');
+const PostDetails = function ({ createdAt, views, likes }) {
+  console.log('dataformat 수정되면 삭제 ', createdAt);
+  const formatDate = '2023/01/01 00:00:00'.split(' ')[0].replace(/\//gi, '.');
   return (
     <div className="post-details">
       <img src={dateImg} alt="date" className="post-details__img" />
@@ -19,15 +20,15 @@ const PostDetails = function ({ date, views, hearts }) {
       <span>{views}</span>
       <img src={bar} alt="|" className="post-details__bar" />
       <img src={heartsImg} alt="hearts" className="post-details__img" />
-      <span>{hearts}</span>
+      <span>{likes}</span>
     </div>
   );
 };
 
 PostDetails.propTypes = {
-  date: PropTypes.string.isRequired,
-  views: PropTypes.string.isRequired,
-  hearts: PropTypes.string.isRequired,
+  createdAt: PropTypes.string.isRequired,
+  views: PropTypes.number.isRequired,
+  likes: PropTypes.number.isRequired,
 };
 
 export default PostDetails;
