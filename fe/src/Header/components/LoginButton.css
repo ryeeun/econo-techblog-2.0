@@ -2,7 +2,6 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    height: 1.8vw;
     text-align: center;
     width: 5.6vw;
     margin: 0;
@@ -15,11 +14,12 @@
 .login-button:hover{
     transition: all ease-out 0.5s;
     background-color: rgb(196, 116, 24);
-    border: 1px rgb(196, 116, 24) solid;
+    border: 0.1vw rgb(196, 116, 24) solid;
 }
 
 .login-button span {
     font-family: proxima-nova, sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 1vw;
 }
