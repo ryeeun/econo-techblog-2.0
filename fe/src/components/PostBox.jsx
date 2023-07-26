@@ -9,6 +9,16 @@ import PostDetails from './PostDetails';
 import noImg from './img/no_img.png';
 
 const PostBox = function ({ post }) {
+  let tagLength = 0;
+  const tagArray = [];
+  post.categoryList.split(',').every((elem) => {
+    if (tagLength + elem.length < 20) {
+      tagLength += elem.length;
+      tagArray.push(elem);
+      return true;
+    }
+    return false;
+  });
   return (
     <Link to={`/post/${post.postId}`} style={{ textDecoration: 'none' }}>
       <div className="post-box">
@@ -17,7 +27,7 @@ const PostBox = function ({ post }) {
           <div className="post-box-info-top">
             <div className="post-box-info__title">{post.title}</div>
             <div className="post-box-info-tag">
-              <Tags tags={post.categoryList} />
+              <Tags tags={tagArray.join(', ')} />
             </div>
           </div>
           <div className="post-box-info__content">{post.content}</div>
