@@ -1,8 +1,12 @@
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useEffect, useState } from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 import '../css/Official.css';
-import OfficialSlide from './OfficialSlide';
+import OfficialPost from './OfficialPost';
 
 const data = [
   {
@@ -42,6 +46,15 @@ const data = [
 ];
 
 const Official = function () {
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+  };
   const [officialPosts, setOfficialPosts] = useState(data);
 
   useEffect(() => {
@@ -51,9 +64,11 @@ const Official = function () {
   if (officialPosts === undefined) return null;
   return (
     <div className="official">
-      <OfficialSlide
-        officialPosts={officialPosts}
-      />
+      <Slider {...settings}>
+        {officialPosts.map((e) => (
+          <OfficialPost key={e.id} post={e} />
+        ))}
+      </Slider>
     </div>
   );
 };

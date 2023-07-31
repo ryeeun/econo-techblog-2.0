@@ -24,3 +24,36 @@
     height: 0.6vw;
     opacity: 1;
 }
+
+.slick-list {
+    border-radius: 1vw;
+    overflow: hidden;
+    box-shadow: 0 0 0.4vw 0 rgba(0, 0, 0, 0.16);
+}
+
+.slick-arrow {
+    display: none !important;
+}
+
+.slick-dots {
+    bottom: -2.5vw;
+}
+
+.slick-dots li {
+    width: 1vw;
+    height: 1vw;
+    margin: 0 0.3vw;
+}
+
+.slick-dots li button {
+    width: 1vw;
+    height: 1vw;
+    padding: 0.3vw
+}
+
+.slick-dots li button:before {
+    width: 1vw;
+    height: 1vw;
+}
+
+
