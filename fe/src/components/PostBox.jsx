@@ -34,9 +34,9 @@ const PostBox = function ({ post }) {
           <div className="post-box-info-bottom">
             <div className="post-box-info-details">
               <PostDetails
-                date={post.createdDate}
+                createdAt={post.createdAt}
                 views={post.views}
-                hearts={post.hearts}
+                likes={post.likes}
               />
             </div>
             <div className="post-box-info-author">

@@ -28,9 +28,9 @@ const OfficialPost = function ({ post }) {
               </span>
             </div>
             <PostDetails
-              date="2023/01/01 00:00:00"
+              createdAt="2023/01/01 00:00:00"
               views={post.views}
-              hearts={post.hearts}
+              likes={post.likes}
             />
           </div>
         </div>

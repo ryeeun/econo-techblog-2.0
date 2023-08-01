@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unstable-nested-components */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useEffect, useState } from 'react';
@@ -18,8 +19,8 @@ const data = [
     mainCategoryNumber: '3',
     categoryList: 'HTML, CSS, React, CSS, React',
     createdDate: '2023/01/01 00:00:00',
-    views: '21',
-    hearts: '21',
+    views: 21,
+    likes: 21,
   },
   {
     postId: '2',
@@ -29,8 +30,8 @@ const data = [
     mainCategoryNumber: '3',
     categoryList: 'HTML, CSS, React',
     createdDate: '2023/01/01 00:00:00',
-    views: '22',
-    hearts: '21',
+    views: 22,
+    likes: 21,
   },
   {
     postId: '3',
@@ -40,8 +41,8 @@ const data = [
     mainCategoryNumber: '3',
     categoryList: 'HTML, CSS, React',
     createdDate: '2023/01/01 00:00:00',
-    views: '23',
-    hearts: '21',
+    views: 23,
+    likes: 21,
   },
 ];
 
@@ -54,6 +55,7 @@ const Official = function () {
     autoplay: true,
     autoplaySpeed: 2000,
     pauseOnHover: true,
+    customPaging: (i) => <div className="official-slider-dots" key={i} />,
   };
   const [officialPosts, setOfficialPosts] = useState(data);
 
@@ -66,7 +68,7 @@ const Official = function () {
     <div className="official">
       <Slider {...settings}>
         {officialPosts.map((e) => (
-          <OfficialPost key={e.id} post={e} />
+          <OfficialPost key={e.postId} post={e} />
         ))}
       </Slider>
     </div>
