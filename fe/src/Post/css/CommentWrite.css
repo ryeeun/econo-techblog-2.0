@@ -1,16 +1,16 @@
-.comment-box {
+.comment-write {
     display: flex;
     margin: 1.2vw 0;
 }
 
-.comment-box__img {
+.comment-write__img {
     width: 2.8vw;
     height: 2.8vw;
     border-radius: 70%;
     margin-right: 0.3vw;
 }
 
-.comment-box__info {
+.comment-write__info {
     flex: 8;
     display: flex;
     flex-direction: column;
@@ -18,14 +18,14 @@
     margin-left: 0.6vw;
 }
 
-.comment-box__writer {
+.comment-write__writer {
     font-size: 1vw;
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 400;
 }
 
-.comment-box__content {
+.comment-write__content {
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -35,7 +35,7 @@
     margin-top: 0.6vw;
 }
 
-.comment-box__input {
+.comment-write__input {
     width: 100%;
     height: 3.7vw;
     border: none;
@@ -46,11 +46,11 @@
     font-weight: 300;
 }
 
-.comment-box__input:focus {
+.comment-write__input:focus {
     outline: none;
 }
 
-.comment-box__button {
+.comment-write__button {
     margin-top: 1.2vw;
     border-radius: 2.4vw;
     border: solid 0.1vw #4e87fb;
@@ -63,7 +63,7 @@
     font-weight: 500;
 }
 
-.comment-box__button:disabled {
+.comment-write__button:disabled {
     border: solid 0.1vw #bbb;
     color: #bbb;
 }
