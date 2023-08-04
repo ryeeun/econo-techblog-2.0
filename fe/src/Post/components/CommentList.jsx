@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import axios from 'axios';
 
 import '../css/CommentList.css';
 
@@ -24,6 +25,16 @@ const result = [
 ];
 
 const CommentList = function () {
+  useEffect(() => {
+    axios
+      .get(`${process.env.REACT_APP_TECONO_API_URL}/boards/1/comments`)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log('error', error);
+      });
+  }, []);
   return (
     <div className="comment-list">
       <span className="comment-list__num">{`댓글 ${result.length}개`}</span>
