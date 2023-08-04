@@ -1,6 +1,8 @@
 .comment {
     display: flex;
     margin: 1.2vw 0;
+    padding-bottom: 2vw;
+    border-bottom: solid 0.1vw #bbbbbb59;
 }
 
 .comment__img {
