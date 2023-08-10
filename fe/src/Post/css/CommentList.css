@@ -13,8 +13,11 @@
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 400;
-    font-size: 1vw;
+    font-size: 1.2vw;
 }
 
-
+.comment-list-reply {
+    margin-left: auto;
+    width: 90%;
+}
 

@@ -19,7 +19,7 @@
 }
 
 .comment-write__writer {
-    font-size: 1vw;
+    font-size: 1.2vw;
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 400;
@@ -42,7 +42,7 @@
     resize: none;
     font-family: 'Noto Sans KR';
     font-style: normal;
-    font-size: 0.8vw;
+    font-size: 1vw;
     font-weight: 300;
 }
 
@@ -51,12 +51,12 @@
 }
 
 .comment-write__button {
-    margin-top: 1.2vw;
+    margin-top: 1vw;
     border-radius: 2.4vw;
     border: solid 0.1vw #4e87fb;
     background-color: #fff;
     color: #4e87fb;
-    font-size: 0.7vw;
+    font-size: 0.8vw;
     padding: 0.2vw 1vw;
     font-family: 'Noto Sans KR';
     font-style: normal;
