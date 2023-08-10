@@ -7,6 +7,14 @@
     box-shadow: 0 0 0.4vw 0 rgba(0, 0, 0, 0.16);
 }
 
+.slick-slide {
+    opacity: 0;
+}
+
+.slick-active, .slick-cloned {
+    opacity: 1;
+}
+
 .slick-arrow {
     display: none !important;
 }
